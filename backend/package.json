@@ -1,0 +1,19 @@
+{
+  "name": "suci-backend",
+  "version": "1.0.0",
+  "description": "Python/FastAPI Backend for SUCI with npm task runner",
+  "main": "app/main.py",
+  "scripts": {
+    "dev": "venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload",
+    "seed": "venv/bin/python3 scripts/seed_supabase.py",
+    "check-ai": "venv/bin/python3 scripts/check_ai.py",
+    "install-py": "python3 -m venv venv && venv/bin/pip install -r requirements.txt"
+  },
+  "keywords": [
+    "fastapi",
+    "suci",
+    "ollama"
+  ],
+  "author": "Antigravity",
+  "license": "ISC"
+}
