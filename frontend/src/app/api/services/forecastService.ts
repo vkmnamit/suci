@@ -24,7 +24,8 @@ export const forecastService = {
   },
 
   /** GET /forecast/map-trend — Predictive carbon trends for map */
-  async getMapTrend(): Promise<{ trends: any[] }> {
-    return apiClient.get<{ trends: any[] }>("/forecast/map-trend");
+  async getMapTrend(city?: string): Promise<{ trends: any[] }> {
+    const params: Record<string, string> = city ? { city } : {};
+    return apiClient.get<{ trends: any[] }>("/forecast/map-trend", Object.keys(params).length ? params : undefined);
   },
 };

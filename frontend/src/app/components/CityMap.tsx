@@ -64,67 +64,90 @@ export function CityMap({ zones, selectedZone, onZoneSelect }: CityMapProps) {
         </defs>
 
         {/* Render zones */}
-        {zones.map((zone) => (
-          <g key={zone.id}>
-            <motion.rect
-              x={zone.coordinates.x}
-              y={zone.coordinates.y}
-              width={zone.coordinates.width}
-              height={zone.coordinates.height}
-              fill={getZoneColor(zone.carbonEmission, zone.status)}
-              opacity={getZoneOpacity(zone.id)}
-              stroke={
-                zone.status === "CRITICAL"
-                  ? "#EF4444" 
-                  : selectedZone?.id === zone.id
-                  ? "#E8DCCF"
-                  : hoveredZone === zone.id
-                  ? "#E8DCCF"
-                  : "#FFFFFF"
-              }
-              strokeWidth={zone.status === "CRITICAL" ? 4 : (selectedZone?.id === zone.id ? 3 : 1.5)}
-              strokeOpacity={zone.status === "CRITICAL" ? 0.9 : (selectedZone?.id === zone.id ? 0.8 : 0.3)}
-              rx={8}
-              filter={
-                zone.status === "CRITICAL" || selectedZone?.id === zone.id || hoveredZone === zone.id
-                  ? "url(#hover-glow)"
-                  : "url(#glow)"
-              }
-              className={`cursor-pointer transition-all duration-300 ${zone.status === "CRITICAL" ? "animate-pulse" : ""}`}
-              onMouseEnter={() => setHoveredZone(zone.id)}
-              onMouseLeave={() => setHoveredZone(null)}
-              onClick={() => onZoneSelect(zone)}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            />
+        {zones.map((zone) => {
+          const isSelected = selectedZone?.id === zone.id;
+          const isHovered = hoveredZone === zone.id;
+          const isCritical = zone.status === "CRITICAL";
+          
+          const strokeColor = isCritical ? "#EF4444" : (isSelected || isHovered) ? "#E8DCCF" : "#FFFFFF";
+          const strokeWidthVal = isCritical ? 4 : (isSelected ? 3 : 1.5);
+          const strokeOpacityVal = isCritical ? 0.9 : (isSelected ? 0.8 : 0.3);
+          const filterVal = isCritical || isSelected || isHovered ? "url(#hover-glow)" : "url(#glow)";
+          const classNameVal = `cursor-pointer transition-all duration-300 ${isCritical ? "animate-pulse" : ""}`;
+          
+          const centerX = zone.path ? zone.coordinates.x : zone.coordinates.x + zone.coordinates.width / 2;
+          const centerY = zone.path ? zone.coordinates.y : zone.coordinates.y + zone.coordinates.height / 2;
 
-            {/* Zone label */}
-            <text
-              x={zone.coordinates.x + zone.coordinates.width / 2}
-              y={zone.coordinates.y + zone.coordinates.height / 2}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              className="text-sm font-light pointer-events-none select-none"
-              fill={zone.carbonEmission > 3500 ? "#FFFFFF" : "#0B0B0B"}
-              opacity={0.9}
-            >
-              {zone.name.split(" ")[0]}
-            </text>
+          return (
+            <g key={zone.id}>
+              {zone.path ? (
+                <motion.path
+                  d={zone.path}
+                  fill={getZoneColor(zone.carbonEmission, zone.status)}
+                  opacity={getZoneOpacity(zone.id)}
+                  stroke={strokeColor}
+                  strokeWidth={strokeWidthVal}
+                  strokeOpacity={strokeOpacityVal}
+                  filter={filterVal}
+                  className={classNameVal}
+                  onMouseEnter={() => setHoveredZone(zone.id)}
+                  onMouseLeave={() => setHoveredZone(null)}
+                  onClick={() => onZoneSelect(zone)}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                  style={{ transformOrigin: `${centerX}px ${centerY}px` }}
+                />
+              ) : (
+                <motion.rect
+                  x={zone.coordinates.x}
+                  y={zone.coordinates.y}
+                  width={zone.coordinates.width}
+                  height={zone.coordinates.height}
+                  fill={getZoneColor(zone.carbonEmission, zone.status)}
+                  opacity={getZoneOpacity(zone.id)}
+                  stroke={strokeColor}
+                  strokeWidth={strokeWidthVal}
+                  strokeOpacity={strokeOpacityVal}
+                  rx={8}
+                  filter={filterVal}
+                  className={classNameVal}
+                  onMouseEnter={() => setHoveredZone(zone.id)}
+                  onMouseLeave={() => setHoveredZone(null)}
+                  onClick={() => onZoneSelect(zone)}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                  style={{ transformOrigin: `${centerX}px ${centerY}px` }}
+                />
+              )}
 
-            {/* Emission value */}
-            <text
-              x={zone.coordinates.x + zone.coordinates.width / 2}
-              y={zone.coordinates.y + zone.coordinates.height / 2 + 18}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              className="text-xs font-light pointer-events-none select-none"
-              fill={zone.carbonEmission > 3500 ? "#E8DCCF" : "#0B0B0B"}
-              opacity={0.7}
-            >
-              {zone.carbonEmission} kg
-            </text>
-          </g>
-        ))}
+              {/* Zone label */}
+              <text
+                x={centerX}
+                y={centerY}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                className="text-sm font-light pointer-events-none select-none"
+                fill={zone.carbonEmission > 3500 ? "#FFFFFF" : "#0B0B0B"}
+                opacity={0.9}
+              >
+                {zone.name.split(" ")[0]}
+              </text>
+
+              {/* Emission value */}
+              <text
+                x={centerX}
+                y={centerY + 18}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                className="text-xs font-light pointer-events-none select-none"
+                fill={zone.carbonEmission > 3500 ? "#E8DCCF" : "#0B0B0B"}
+                opacity={0.7}
+              >
+                {zone.carbonEmission} kg
+              </text>
+            </g>
+          );
+        })}
       </svg>
 
       {/* Legend */}

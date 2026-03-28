@@ -4,9 +4,11 @@ import type { ApiZone, ApiZoneState } from "../types";
 
 export const cityService = {
   /** GET /city/zones — All city zones */
-  async getZones(): Promise<ApiZone[]> {
+  async getZones(city?: string): Promise<ApiZone[]> {
+    const params: Record<string, string> = city ? { city } : {};
     const response = await apiClient.get<ApiZone[] | { zones: ApiZone[] }>(
-      "/city/zones"
+      "/city/zones",
+      params // Pass params directly, not nested
     );
     // Handle both array and wrapped response
     return Array.isArray(response) ? response : response.zones || [];

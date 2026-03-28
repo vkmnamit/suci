@@ -58,9 +58,9 @@ export default function App() {
       case "scenarios":
         return <ScenariosPage currentCity={currentCity} />;
       case "interventions":
-        return <InterventionsPage />;
+        return <InterventionsPage selectedCity={selectedCity} />;
       case "reports":
-        return <ReportsPage />;
+        return <ReportsPage selectedCity={selectedCity} />;
       case "settings":
         return <SettingsPage />;
       default:

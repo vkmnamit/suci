@@ -6,9 +6,11 @@ import { useZoneState } from "../hooks/useCityData";
 interface FloatingZonePanelProps {
   zone: Zone | null;
   onClose: () => void;
+  autoSimulationResult?: any;
+  isAutoSimulating?: boolean;
 }
 
-export function FloatingZonePanel({ zone, onClose }: FloatingZonePanelProps) {
+export function FloatingZonePanel({ zone, onClose, autoSimulationResult, isAutoSimulating }: FloatingZonePanelProps) {
   const { data: liveState, loading: liveLoading } = useZoneState(zone?.id || null);
 
   if (!zone) return null;
@@ -129,6 +131,50 @@ export function FloatingZonePanel({ zone, onClose }: FloatingZonePanelProps) {
             </div>
           </div>
         </div>
+
+        {/* AI Strategic Outcome (New) */}
+        <AnimatePresence>
+          {(isAutoSimulating || autoSimulationResult) && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="mt-6 pt-6 border-t border-white/10"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <Activity className={`w-3.5 h-3.5 text-[#E8DCCF] ${isAutoSimulating ? 'animate-spin' : ''}`} />
+                <h4 className="text-[10px] text-[#E8DCCF] uppercase tracking-[0.2em] font-medium">Strategic Tactical Outcome</h4>
+              </div>
+
+              {isAutoSimulating ? (
+                <div className="space-y-3">
+                  <div className="h-4 bg-white/5 rounded-md animate-pulse w-3/4" />
+                  <div className="h-10 bg-white/5 rounded-md animate-pulse" />
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <div className="bg-[#E8DCCF]/5 rounded-xl p-3 border border-[#E8DCCF]/10">
+                    <p className="text-[10px] text-white/40 mb-1 uppercase tracking-tight">Projected Reduction</p>
+                    <p className="text-xl text-[#E8DCCF] font-light">
+                      {autoSimulationResult.calculated_reduction}% <span className="text-[10px] text-green-400 ml-1">Optimized</span>
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <p className="text-[9px] text-white/30 uppercase tracking-widest">Recommended Micro-Tactics</p>
+                    <ul className="space-y-1.5">
+                      {autoSimulationResult.suggestions?.slice(0, 2).map((step: any, i: number) => (
+                        <li key={i} className="text-[10px] text-white/70 font-light flex gap-2">
+                          <span className="text-[#E8DCCF]">•</span> {step}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Alert */}
         {isHighRisk && (

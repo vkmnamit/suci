@@ -100,7 +100,7 @@ export function AiAssistant() {
                         : 'bg-white/5 text-white/90 border border-white/10 rounded-tl-none prose prose-invert prose-xs max-w-none'
                     }`}>
                       {m.role === 'assistant' ? (
-                        <Typewriter text={m.content} />
+                        m.isNew ? <Typewriter text={m.content} /> : <ReactMarkdown>{m.content}</ReactMarkdown>
                       ) : (
                         m.content
                       )}

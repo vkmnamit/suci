@@ -41,25 +41,10 @@ export function Navbar({
 
         {/* Center: City Selector */}
         <div className="absolute left-1/2 -translate-x-1/2 hidden sm:block">
-          <Select
-            value={selectedCity}
-            onValueChange={onCityChange}
-          >
-            <SelectTrigger className="w-[180px] bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="bg-[#0B0B0B] border-white/10 text-white">
-      <SelectItem value="bangalore" className="text-white focus:bg-white/10 focus:text-white cursor-pointer transition-colors">
-        Bangalore Hub
-      </SelectItem>
-      <SelectItem value="delhi" className="text-white focus:bg-white/10 focus:text-white cursor-pointer transition-colors">
-        Delhi NCR Region
-      </SelectItem>
-      <SelectItem value="mumbai" className="text-white focus:bg-white/10 focus:text-white cursor-pointer transition-colors">
-        Mumbai Metropol
-      </SelectItem>
-            </SelectContent>
-          </Select>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white/90">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#10B981]"></div>
+            Bangalore Hub
+          </div>
         </div>
 
         {/* Right: Profile */}

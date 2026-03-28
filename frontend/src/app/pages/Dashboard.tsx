@@ -21,8 +21,38 @@ export function Dashboard({ currentCity, totalEnergy }: DashboardProps) {
   const [selectedZone, setSelectedZone] = useState<Zone | null>(null);
   const [is3D, setIs3D] = useState(false);
   const [forecastMode, setForecastMode] = useState(false);
+  const [isAutoSimulating, setIsAutoSimulating] = useState(false);
+  const [autoSimulationResult, setAutoSimulationResult] = useState<any>(null);
 
   const { data: trendData } = useMapTrend();
+
+  const handleZoneSelect = async (zone: Zone | null) => {
+    setSelectedZone(zone);
+    if (zone) {
+      // Trigger Automatic Tactical AI Simulation for "Best Outcome"
+      setIsAutoSimulating(true);
+      setAutoSimulationResult(null);
+      try {
+        const resp = await fetch("http://localhost:8000/api/v1/scenarios/simulate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            zone_id: zone.id,
+            zone_name: zone.name,
+            traffic: 50, // Best outcome simulation params
+            solar: 40,
+            energy: 30
+          })
+        });
+        const result = await resp.json();
+        setAutoSimulationResult(result);
+      } catch (err) {
+        console.error("Auto-simulation failed:", err);
+      } finally {
+        setIsAutoSimulating(false);
+      }
+    }
+  };
 
   // Merge trends into zones for visualization if in forecast mode
   const displayZones = useMemo(() => {
@@ -124,7 +154,7 @@ export function Dashboard({ currentCity, totalEnergy }: DashboardProps) {
                 >
                   <CityGraph3D 
                     zones={displayZones} 
-                    onZoneSelect={setSelectedZone} 
+                    onZoneSelect={handleZoneSelect} 
                     selectedZoneId={selectedZone?.id}
                   />
                 </motion.div>
@@ -139,7 +169,7 @@ export function Dashboard({ currentCity, totalEnergy }: DashboardProps) {
                   <CityMap
                     zones={displayZones}
                     selectedZone={selectedZone}
-                    onZoneSelect={setSelectedZone}
+                    onZoneSelect={handleZoneSelect}
                   />
                 </motion.div>
               )}
@@ -177,7 +207,9 @@ export function Dashboard({ currentCity, totalEnergy }: DashboardProps) {
             {/* Floating Zone Details */}
             <FloatingZonePanel
               zone={selectedZone}
-              onClose={() => setSelectedZone(null)}
+              onClose={() => handleZoneSelect(null)}
+              autoSimulationResult={autoSimulationResult}
+              isAutoSimulating={isAutoSimulating}
             />
           </div>
 

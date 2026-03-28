@@ -8,9 +8,9 @@ from typing import List, Dict
 city_router = APIRouter()
 
 @city_router.get("/zones")
-async def get_all_zones():
+async def get_all_zones(city: str = "bangalore"):
     """Retrieve current state of all city zones from Neo4j graph."""
-    zones = await city_graph_service.get_all_zones()
+    zones = await city_graph_service.get_all_zones(city)
     return {"zones": zones}
 
 @city_router.get("/zones/{zone_id}")
@@ -47,9 +47,9 @@ async def get_energy_forecast(zone_id: str, hours: int = 6, forecast_service: Fo
     return comparison
 
 @forecast_router.get("/map-trend")
-async def get_map_trend(forecast_service: ForecastService = Depends(get_forecast_service)):
+async def get_map_trend(city: str = "bangalore", forecast_service: ForecastService = Depends(get_forecast_service)):
     """Fetch predictive carbon trends for every city zone for map visualization."""
-    zones = await city_graph_service.get_all_zones()
+    zones = await city_graph_service.get_all_zones(city)
     trend_data = []
     
     for zone in zones:

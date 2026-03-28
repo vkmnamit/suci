@@ -1,5 +1,5 @@
 // ─── Chat Hook ───────────────────────────────────────────────────────────────
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { chatService } from "../api";
 
 export interface ChatEntry {
@@ -8,12 +8,52 @@ export interface ChatEntry {
   content: string;
   timestamp: Date;
   isStreaming?: boolean;
+  isNew?: boolean;
 }
 
 export function useChat() {
-  const [messages, setMessages] = useState<ChatEntry[]>([]);
+  const [messages, setMessages] = useState<ChatEntry[]>(() => {
+    const saved = localStorage.getItem("suci_chat_history");
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return parsed.map((m: any) => ({ ...m, isNew: false }));
+      } catch {
+        return [];
+      }
+    }
+    return [];
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Fetch history from backend on mount
+  useEffect(() => {
+    async function fetchHistory() {
+      try {
+        const response = await chatService.getHistory();
+        if (response.history && response.history.length > 0) {
+          const formatted = response.history.map((m: any) => ({
+            id: m.id || `${m.role}-${Date.now()}-${Math.random()}`,
+            role: m.role,
+            content: m.content,
+            timestamp: new Date(m.timestamp || Date.now()),
+            isNew: false
+          }));
+          setMessages(formatted);
+          localStorage.setItem("suci_chat_history", JSON.stringify(formatted));
+        }
+      } catch (err) {
+        console.error("Failed to fetch chat history:", err);
+      }
+    }
+    fetchHistory();
+  }, []);
+
+  // Sync to local storage on changes
+  useEffect(() => {
+    localStorage.setItem("suci_chat_history", JSON.stringify(messages));
+  }, [messages]);
 
   /** Send a message (non-streaming) */
   const sendMessage = useCallback(async (message: string) => {
@@ -22,6 +62,7 @@ export function useChat() {
       role: "user",
       content: message,
       timestamp: new Date(),
+      isNew: true,
     };
 
     setMessages((prev) => [...prev, userEntry]);
@@ -38,6 +79,7 @@ export function useChat() {
         role: "assistant",
         content: assistantContent,
         timestamp: new Date(),
+        isNew: true,
       };
 
       setMessages((prev) => [...prev, assistantEntry]);
@@ -150,6 +192,7 @@ export function useChat() {
 
   const clearMessages = useCallback(() => {
     setMessages([]);
+    localStorage.removeItem("suci_chat_history");
     setError(null);
   }, []);
 
