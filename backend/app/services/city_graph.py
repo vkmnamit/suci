@@ -192,9 +192,38 @@ class CityGraphService:
             logger.error(f"Deep Strategic Strategist Failed: {e}")
             return {
                 "id": f"zone-{zone_name.lower().replace(' ', '-')}",
-                "status": "COMMAND_FAIL",
-                "lat": real_inputs["latitude"],        
+                "name": zone_name.title(),
+                "lat": real_inputs["latitude"],
                 "lng": real_inputs["longitude"],
+                "carbon_score": float(real_inputs.get("pm2_5", 50) * 0.8),
+                "carbon_intensity": float(real_inputs.get("pm2_5", 50) * 1.5),
+                "renewable_fraction": 0.40,
+                "status": "COMMAND_FAIL",
+                "ai_analysis": "AI inference engine failed to respond. Using localized sensor defaults.",
+                "recommended_action": "Verify local AI container health and restart inference engine.",
+                "thought": f"The inference generated an error or timed out, returning standardized schema for {zone_name} to maintain UI integrity.",
+                "tactical_ops": {
+                    "immediate_1h": {
+                        "action": "Maintain current baseline operations.",
+                        "impact": "0 kg CO2 avoided"
+                    },
+                    "short_term_3h": {
+                        "action": "Awaiting AI recovery.",
+                        "impact": "0 kg"
+                    },
+                    "mid_cycle_6h": {
+                        "action": "Awaiting AI recovery.",
+                        "impact": "0 kg"
+                    }
+                },
+                "carbon_control_strategy": [
+                    {
+                        "method": "Manual Override",
+                        "how_it_works": "AI tactical commander is offline. Operating on pre-programmed heuristics.",
+                        "expected_co2_drop": "Uncertain"
+                    }
+                ],
+                "final_conclusion": "Operating in local resilient mode without AI assistance.",
                 "updated_at": real_inputs["timestamp"]
             }
 
