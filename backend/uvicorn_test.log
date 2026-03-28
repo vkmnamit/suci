@@ -418,3 +418,8 @@ INFO:     127.0.0.1:64895 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
 INFO:     127.0.0.1:64922 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
 INFO:     127.0.0.1:64949 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
 INFO:     127.0.0.1:64949 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64973 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65002 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65002 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65020 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65029 - "GET /api/v1/city/zones HTTP/1.1" 200 OK

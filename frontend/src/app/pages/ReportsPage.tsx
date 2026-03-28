@@ -1,38 +1,11 @@
 import { motion } from "motion/react";
 import { FileText, Download, Calendar, TrendingDown } from "lucide-react";
 import { Button } from "../components/ui/button";
+import { useReports } from "../hooks/useReportData";
 
 export function ReportsPage() {
-  const reports = [
-    {
-      title: "Monthly Carbon Report - March 2026",
-      date: "March 27, 2026",
-      type: "Monthly Summary",
-      size: "2.4 MB",
-      status: "Ready",
-    },
-    {
-      title: "Quarterly Analysis Q1 2026",
-      date: "March 25, 2026",
-      type: "Quarterly Report",
-      size: "5.8 MB",
-      status: "Ready",
-    },
-    {
-      title: "Zone Performance Analysis",
-      date: "March 20, 2026",
-      type: "Performance Report",
-      size: "3.2 MB",
-      status: "Ready",
-    },
-    {
-      title: "AI Model Accuracy Report",
-      date: "March 15, 2026",
-      type: "Technical Report",
-      size: "1.9 MB",
-      status: "Ready",
-    },
-  ];
+  const { data: reportsData, loading } = useReports();
+  const reports = reportsData || [];
 
   return (
     <motion.div
@@ -65,7 +38,7 @@ export function ReportsPage() {
             </div>
             <div>
               <p className="text-xs text-white/60 font-light">Total Reports</p>
-              <p className="text-2xl text-white font-light">24</p>
+              <p className="text-2xl text-white font-light">{loading ? "..." : reports.length}</p>
             </div>
           </div>
         </div>
@@ -122,9 +95,12 @@ export function ReportsPage() {
         </div>
 
         <div className="space-y-3">
-          {reports.map((report, index) => (
+          {loading && (
+            <div className="text-center py-10 text-white/40 font-light">Loading reports...</div>
+          )}
+          {!loading && reports.map((report, index) => (
             <motion.div
-              key={index}
+              key={report.id || index}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -149,7 +125,11 @@ export function ReportsPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 bg-green-500/10 border border-green-500/30 text-green-400 text-xs rounded-lg font-light">
+                  <span className={`px-3 py-1 border text-xs rounded-lg font-light ${
+                    report.status === 'Finalized' || report.status === 'Ready' 
+                      ? 'bg-green-500/10 border-green-500/30 text-green-400' 
+                      : 'bg-yellow-500/10 border-yellow-500/30 text-yellow-400'
+                  }`}>
                     {report.status}
                   </span>
                   <Button
@@ -163,6 +143,9 @@ export function ReportsPage() {
               </div>
             </motion.div>
           ))}
+          {!loading && reports.length === 0 && (
+            <div className="text-center py-10 text-white/40 font-light">No reports available.</div>
+          )}
         </div>
       </div>
 

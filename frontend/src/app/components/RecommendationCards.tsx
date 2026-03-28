@@ -1,25 +1,39 @@
-import { recommendations } from "../data/mockData";
 import { Sparkles, TrendingUp, Zap, Leaf } from "lucide-react";
 import { motion } from "motion/react";
+import { useInterventions } from "../hooks/useInterventionData";
 
 export function RecommendationCards() {
-  const getPriorityColor = (priority: number) => {
-    if (priority === 1) return "from-[#E8DCCF]/20 to-[#D4C5B3]/20 border-[#E8DCCF]/40";
-    if (priority === 2) return "from-[#E8DCCF]/15 to-[#D4C5B3]/15 border-[#E8DCCF]/30";
+  const { data: interventions, loading } = useInterventions();
+  const recommendations = interventions || [];
+
+  const getPriorityColor = (impact: string) => {
+    if (impact === "High") return "from-[#E8DCCF]/20 to-[#D4C5B3]/20 border-[#E8DCCF]/40";
+    if (impact === "Medium") return "from-[#E8DCCF]/15 to-[#D4C5B3]/15 border-[#E8DCCF]/30";
     return "from-white/5 to-white/10 border-white/20";
   };
 
-  const getPriorityBadge = (priority: number) => {
-    if (priority === 1) return "High Impact";
-    if (priority === 2) return "Medium Impact";
+  const getPriorityBadge = (impact: string) => {
+    if (impact === "High") return "High Impact";
+    if (impact === "Medium") return "Medium Impact";
     return "Low Impact";
   };
 
+  const getPriorityLevel = (impact: string) => {
+    if (impact === "High") return 1;
+    if (impact === "Medium") return 2;
+    return 3;
+  };
+
   const getIcon = (id: string) => {
-    if (id.includes("rec-1")) return Sun;
-    if (id.includes("rec-2")) return Zap;
-    if (id.includes("rec-5")) return Leaf;
+    if (id.includes("int-1")) return Sun;
+    if (id.includes("int-2")) return Zap;
+    if (id.includes("int-3")) return Leaf;
     return TrendingUp;
+  };
+
+  // Helper to extract number from "12.5%" string
+  const parseImpact = (val: string) => {
+    return parseFloat(val.replace(/[^\d.]/g, '')) || 0;
   };
 
   return (
@@ -39,8 +53,12 @@ export function RecommendationCards() {
       </div>
 
       <div className="space-y-3">
-        {recommendations.map((rec, index) => {
+        {loading && (
+          <div className="text-center py-10 text-white/40 font-light italic">Analyzing city patterns...</div>
+        )}
+        {!loading && recommendations.map((rec, index) => {
           const Icon = getIcon(rec.id);
+          const impactPercent = parseImpact(rec.co2_reduction);
           return (
             <motion.div
               key={rec.id}
@@ -48,7 +66,7 @@ export function RecommendationCards() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.3 }}
               className={`bg-gradient-to-br ${getPriorityColor(
-                rec.priority
+                rec.impact
               )} backdrop-blur-sm border rounded-xl p-4 hover:scale-[1.02] transition-all duration-300 cursor-pointer group`}
             >
               <div className="flex items-start gap-3">
@@ -65,14 +83,14 @@ export function RecommendationCards() {
                     </h4>
                     <span
                       className={`text-xs px-2 py-0.5 rounded-full font-light flex-shrink-0 ${
-                        rec.priority === 1
+                        rec.impact === "High"
                           ? "bg-[#E8DCCF]/20 text-[#E8DCCF]"
-                          : rec.priority === 2
+                          : rec.impact === "Medium"
                           ? "bg-white/10 text-white/80"
                           : "bg-white/5 text-white/60"
                       }`}
                     >
-                      {getPriorityBadge(rec.priority)}
+                      {getPriorityBadge(rec.impact)}
                     </span>
                   </div>
 
@@ -85,13 +103,13 @@ export function RecommendationCards() {
                     <div className="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={{ width: `${rec.impact}%` }}
+                        animate={{ width: `${impactPercent * 4}%` }} // Multiplying for visual effect as % are small
                         transition={{ delay: index * 0.1 + 0.3, duration: 0.6 }}
                         className="h-full bg-gradient-to-r from-[#E8DCCF] to-[#B8A393]"
                       ></motion.div>
                     </div>
                     <span className="text-xs text-[#E8DCCF] font-light flex-shrink-0">
-                      -{rec.impact}%
+                      -{rec.co2_reduction}
                     </span>
                   </div>
                 </div>

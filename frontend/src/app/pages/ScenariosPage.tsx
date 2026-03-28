@@ -61,7 +61,7 @@ export function ScenariosPage({ currentCity }: ScenariosPageProps) {
           {loading && (
             <div className="text-center py-10 text-white/40 font-light">Loading scenarios...</div>
           )}
-          {!loading && scenarios.map((scenario, index) => (
+          {!loading && (scenarios || []).map((scenario, index) => (
             <motion.div
               key={scenario.id || index}
               initial={{ opacity: 0, y: 10 }}
@@ -91,7 +91,7 @@ export function ScenariosPage({ currentCity }: ScenariosPageProps) {
               </div>
             </motion.div>
           ))}
-          {!loading && scenarios.length === 0 && (
+          {!loading && (!scenarios || scenarios.length === 0) && (
             <div className="text-center py-10 text-white/40 font-light">No saved scenarios found.</div>
           )}
         </div>
