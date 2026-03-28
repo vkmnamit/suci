@@ -32,7 +32,9 @@ export function Navbar({
           </button>
 
           <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-[#E8DCCF]"></div>
+            <div className="bg-black p-1 rounded-md border border-white/5 shadow-inner flex items-center justify-center">
+              <img src="https://res.cloudinary.com/dgrrdy6sk/image/upload/v1774677791/1546087-middle_mou8af.png" alt="SUCI Logo" className="w-8 h-8 object-contain mix-blend-screen" />
+            </div>
             <h1 className="text-3xl font-bold tracking-wider text-white">
               SUCI
             </h1>

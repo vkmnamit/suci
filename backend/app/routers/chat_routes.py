@@ -1,30 +1,10 @@
 from fastapi import APIRouter, Depends, Body
 from fastapi.responses import StreamingResponse
 from app.services.chat import ChatService, get_chat_service
-from app.db.database_clients import get_db_session
-from sqlalchemy.ext.asyncio import AsyncSession
+from app.db.supabase_client import get_supabase
 from typing import List, Dict, Optional
 import json
-import os
 from datetime import datetime
-
-CHAT_DB_FILE = "chat_db.json"
-
-def load_chat_db():
-    if os.path.exists(CHAT_DB_FILE):
-        try:
-            with open(CHAT_DB_FILE, "r") as f:
-                return json.load(f)
-        except Exception:
-            return {}
-    return {}
-
-def save_chat_db(db):
-    try:
-        with open(CHAT_DB_FILE, "w") as f:
-            json.dump(db, f, indent=2)
-    except Exception:
-        pass
 
 chat_router = APIRouter()
 
@@ -33,26 +13,23 @@ async def send_chat_message(
     message: str = Body(..., embed=True),
     conversation_id: str = Body("default", embed=True),
     stream: bool = Body(False, embed=True),
-    chat_service: ChatService = Depends(get_chat_service)
+    chat_service: ChatService = Depends(get_chat_service),
+    supabase = Depends(get_supabase)
 ):
     """Send a user message to SUCI's AI analyst and get a context-grounded response."""
-    chat_db = load_chat_db()
     if conversation_id is None:
         conversation_id = "default"
         
-    if conversation_id not in chat_db:
-        chat_db[conversation_id] = []
-        
-    history = [{"role": m["role"], "content": m["content"]} for m in chat_db[conversation_id]]
-    
     # Save user message
-    chat_db[conversation_id].append({
-        "id": f"user-{datetime.now().timestamp()}",
+    supabase.table("chat_history").insert({
+        "conversation_id": conversation_id,
         "role": "user",
-        "content": message,
-        "timestamp": datetime.now().isoformat()
-    })
-    save_chat_db(chat_db)
+        "content": message
+    }).execute()
+        
+    # Fetch history for context
+    res = supabase.table("chat_history").select("role, content").eq("conversation_id", conversation_id).order("created_at").execute()
+    history = [{"role": row["role"], "content": row["content"]} for row in (res.data or [])]
     
     # If streaming is requested, return a StreamingResponse
     if stream:
@@ -60,10 +37,19 @@ async def send_chat_message(
             # Initial token for SSE
             yield f"data: {json.dumps({'token': ''})}\n\n"
             
+            full_response = ""
             async for token in chat_service.send_message_stream(message, history):
+                full_response += token
                 yield f"data: {json.dumps({'token': token})}\n\n"
+                
+            # Persist the output of AI into the Supabase table even in streaming mode!
+            supabase.table("chat_history").insert({
+                "conversation_id": conversation_id,
+                "role": "assistant",
+                "content": full_response
+            }).execute()
             
-            yield f"data: {json.dumps({'done': True, 'full_response': 'Generated full response text here'})}\n\n"
+            yield f"data: {json.dumps({'done': True, 'full_response': full_response})}\n\n"
 
         return StreamingResponse(response_streamer(), media_type="text/event-stream")
     
@@ -71,13 +57,11 @@ async def send_chat_message(
         # Fetch non-streaming response from ChatService
         response = await chat_service.send_message(message, history)
         
-        chat_db[conversation_id].append({
-            "id": f"assistant-{datetime.now().timestamp()}",
+        supabase.table("chat_history").insert({
+            "conversation_id": conversation_id,
             "role": "assistant",
-            "content": response,
-            "timestamp": datetime.now().isoformat()
-        })
-        save_chat_db(chat_db)
+            "content": response
+        }).execute()
         
         return {"response": response}
 
@@ -88,9 +72,13 @@ async def get_daily_briefing(chat_service: ChatService = Depends(get_chat_servic
     return {"briefing": briefing}
 
 @chat_router.get("/history")
-async def get_chat_history(conversation_id: str = "default"):
+async def get_chat_history(conversation_id: str = "default", supabase = Depends(get_supabase)):
     """Retrieve the conversation history for a specific chat ID."""
-    chat_db = load_chat_db()
-    return {"history": chat_db.get(conversation_id, [])}
+    try:
+        res = supabase.table("chat_history").select("id, role, content, created_at").eq("conversation_id", conversation_id).order("created_at").execute()
+        history = [{"id": str(row["id"]), "role": row["role"], "content": row["content"], "timestamp": row["created_at"]} for row in (res.data or [])]
+        return {"history": history}
+    except Exception:
+        return {"history": []}
 
 router = chat_router

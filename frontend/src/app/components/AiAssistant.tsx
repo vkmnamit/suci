@@ -79,7 +79,8 @@ export function AiAssistant() {
             <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
               {messages.length === 0 && (
                 <div className="h-full flex flex-col items-center justify-center text-center p-8">
-                  <p className="text-white/20 text-xs font-light tracking-widest uppercase italic">Initializing Secure Link...</p>
+                  <p className="text-[#E8DCCF]/50 text-xs font-light tracking-widest uppercase italic">Secure Link Established.</p>
+                  <p className="text-white/30 text-[10px] mt-2 uppercase tracking-widest">Awaiting Input...</p>
                 </div>
               )}
 

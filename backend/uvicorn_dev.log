@@ -1,0 +1,126 @@
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 11:27:30 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [49779]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56137 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56144 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56161 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56161 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56164 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56167 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56161 - "GET /api/v1/chat/history?conversation_id=default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56166 - "GET /api/v1/forecast/map-trend?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56185 - "GET /api/v1/chat/history?conversation_id=default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56169 - "OPTIONS /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56188 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56229 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56231 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56237 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56234 - "GET /api/v1/forecast/map-trend?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56236 - "GET /api/v1/chat/history?conversation_id=default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56257 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56285 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56285 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56285 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56304 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56309 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56306 - "GET /api/v1/forecast/map-trend?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56308 - "GET /api/v1/chat/history?conversation_id=default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56322 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56338 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56338 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56376 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56404 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56404 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56494 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56517 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56524 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56564 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56559 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56573 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56575 - "GET /api/v1/chat/history?conversation_id=terminal-test-2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56580 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56613 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56613 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56616 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56621 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56617 - "GET /api/v1/forecast/map-trend?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56620 - "GET /api/v1/chat/history?conversation_id=default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56648 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56648 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56651 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56656 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56653 - "GET /api/v1/forecast/map-trend?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56655 - "GET /api/v1/chat/history?conversation_id=default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56744 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56744 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56747 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56752 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56749 - "GET /api/v1/forecast/map-trend?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56751 - "GET /api/v1/chat/history?conversation_id=default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56872 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56906 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56906 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56945 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56957 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56965 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56984 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56993 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57007 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57010 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57015 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57027 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57030 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57033 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57052 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57063 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57075 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57087 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57092 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57096 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57108 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57117 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57126 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57129 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57135 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57149 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57153 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57163 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57180 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57183 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57188 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57199 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57204 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57209 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57218 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57223 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57229 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57238 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57241 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57247 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57257 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57257 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57269 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57278 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57278 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57288 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57297 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57303 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57310 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57313 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57317 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57327 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57330 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57363 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57377 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57383 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57388 - "GET /api/v1/city/zones?city=bangalore HTTP/1.1" 200 OK
