@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     
     # CORS
-    CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:8000"]
+    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:8000"]
     
     # Supabase (Replacing custom Postgres/Redis)
     SUPABASE_URL: str = "https://your-project-id.supabase.co"
@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     
     # AI / External APIs
     OLLAMA_HOST: str = "http://localhost:11434"
-    OLLAMA_REASONING_MODEL: str = "deepseek-r1:1.5b"
+    OLLAMA_REASONING_MODEL: str = "qwen2.5:7b"
     OPENMETEO_BASE_URL: str = "https://api.open-meteo.com/v1"
     
     # RLAIF

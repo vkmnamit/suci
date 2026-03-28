@@ -1,146 +1,420 @@
 INFO:     Will watch for changes in these directories: ['/Users/namitraj/Desktop/suci/backend']
-INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
-INFO:     Started reloader process [18454] using WatchFiles
-INFO:     Started server process [18457]
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [30300] using WatchFiles
+INFO:     Started server process [30343]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:60317 - "POST /api/v1/chat/message HTTP/1.1" 500 Internal Server Error
-ERROR:    Exception in ASGI application
-Traceback (most recent call last):
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
-    yield
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 250, in handle_request
-    resp = self._pool.handle_request(req)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
-    raise exc from None
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
-    response = connection.handle_request(
-        pool_request.request
-    )
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
-    raise exc
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
-    stream = self._connect(request)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 124, in _connect
-    stream = self._network_backend.connect_tcp(**kwargs)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
-    with map_exceptions(exc_map):
-         ~~~~~~~~~~~~~~^^^^^^^^^
-  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
-    self.gen.throw(value)
-    ~~~~~~~~~~~~~~^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
-    raise to_exc(exc) from exc
-httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
-    result = await app(  # type: ignore[func-returns-value]
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        self.scope, self.receive, self.send
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
-    return await self.app(scope, receive, send)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
-    await super().__call__(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
-    raise exc
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
-    await self.app(scope, receive, _send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 88, in __call__
-    await self.app(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
-    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
-    raise exc
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
-    await app(scope, receive, sender)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
-    await route.handle(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
-    await self.app(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
-    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
-    raise exc
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
-    await app(scope, receive, sender)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
-    response = await f(request)
-               ^^^^^^^^^^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
-    raw_response = await run_endpoint_function(
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
-    return await dependant.call(**values)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/app/routers/chat_routes.py", line 36, in send_chat_message
-    response = await chat_service.generate_morning_briefing() # Placeholder for direct message
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/app/services/chat.py", line 63, in generate_morning_briefing
-    city_context = await self.build_city_context()
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/app/services/chat.py", line 18, in build_city_context
-    zones = await city_graph_service.get_all_zones()
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/app/services/city_graph.py", line 13, in get_all_zones
-    response = self.client.table("zones").select("*").execute()
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/postgrest/_sync/request_builder.py", line 47, in execute
-    r = self.request.send()
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/postgrest/base_request_builder.py", line 82, in send
-    return self.session.request(
-           ~~~~~~~~~~~~~~~~~~~~^
-        self.http_method,
-        ^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        auth=self.auth,
-        ^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 825, in request
-    return self.send(request, auth=auth, follow_redirects=follow_redirects)
-           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 914, in send
-    response = self._send_handling_auth(
-        request,
-    ...<2 lines>...
-        history=[],
-    )
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 942, in _send_handling_auth
-    response = self._send_handling_redirects(
-        request,
-        follow_redirects=follow_redirects,
-        history=history,
-    )
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
-    response = self._send_single_request(request)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 1014, in _send_single_request
-    response = transport.handle_request(request)
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 249, in handle_request
-    with map_httpcore_exceptions():
-         ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
-    self.gen.throw(value)
-    ~~~~~~~~~~~~~~^^^^^^^
-  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
-    raise mapped_exc(message) from exc
-httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+2026-03-28 07:15:44 [info     ] Zone Koramangala not found. Triggering AI prediction...
+2026-03-28 07:15:48 [error    ] AI Prediction failed for Koramangala: bad character in group name '?=\\{' at position 14
+INFO:     127.0.0.1:63038 - "GET /api/v1/city/zones/Koramangala HTTP/1.1" 200 OK
+2026-03-28 07:15:48 [info     ] Zone Manhattan not found. Triggering AI prediction...
+2026-03-28 07:15:53 [error    ] AI Prediction failed for Manhattan: bad character in group name '?=\\{' at position 14
+INFO:     127.0.0.1:63042 - "GET /api/v1/city/zones/Manhattan HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [18457]
-INFO:     Stopping reloader process [18454]
+INFO:     Finished server process [30343]
+INFO:     Started server process [30609]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:16:25 [info     ] Zone whitfield not found. Triggering AI prediction...
+2026-03-28 07:16:31 [error    ] AI Prediction failed for whitfield: bad character in group name '?=\\{' at position 14
+INFO:     127.0.0.1:63054 - "GET /api/v1/city/zones/whitfield HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.13/site-packages/geopy/geocoders/geolake.py', 'venv/lib/python3.13/site-packages/geopy/compat.py', 'venv/lib/python3.13/site-packages/geographiclib/constants.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodeearth.py', 'venv/lib/python3.13/site-packages/geopy/units.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/osm.py', 'venv/lib/python3.13/site-packages/geopy/location.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/google.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/smartystreets.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/algolia.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/woosmap.py', 'venv/lib/python3.13/site-packages/geographiclib/geodesicline.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/nominatim.py', 'venv/lib/python3.13/site-packages/geopy/adapters.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/baidu.py', 'venv/lib/python3.13/site-packages/geographiclib/polygonarea.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/googlev3.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/photon.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapquest.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodefarm.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/openmapquest.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/azure.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/databc.py', 'venv/lib/python3.13/site-packages/geopy/extra/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/tomtom.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/placefinder.py', 'venv/lib/python3.13/site-packages/geopy/format.py', 'venv/lib/python3.13/site-packages/geographiclib/geodesiccapability.py', 'venv/lib/python3.13/site-packages/geographiclib/geodesic.py', 'venv/lib/python3.13/site-packages/geographiclib/test/__init__.py', 'venv/lib/python3.13/site-packages/geopy/point.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/opencage.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodio.py', 'venv/lib/python3.13/site-packages/geopy/timezone.py', 'venv/lib/python3.13/site-packages/geopy/exc.py', 'venv/lib/python3.13/site-packages/geopy/distance.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geonames.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/ignfrance.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/dot_us.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/base.py', 'venv/lib/python3.13/site-packages/geopy/extra/rate_limiter.py', 'venv/lib/python3.13/site-packages/geographiclib/geomath.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/what3words.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapbox.py', 'venv/lib/python3.13/site-packages/geopy/util.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/bing.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapzen.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/arcgis.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/pelias.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/banfrance.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/maptiler.py', 'venv/lib/python3.13/site-packages/geographiclib/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geokeo.py', 'venv/lib/python3.13/site-packages/geographiclib/accumulator.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/here.py', 'venv/lib/python3.13/site-packages/geopy/__init__.py', 'venv/lib/python3.13/site-packages/geographiclib/test/test_geodesic.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/yandex.py', 'venv/lib/python3.13/site-packages/geographiclib/test/test_sign.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/pickpoint.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30609]
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.13/site-packages/geopy/geocoders/geolake.py', 'venv/lib/python3.13/site-packages/geopy/compat.py', 'venv/lib/python3.13/site-packages/geographiclib/constants.py', 'venv/lib/python3.13/site-packages/geopy/units.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodeearth.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/osm.py', 'venv/lib/python3.13/site-packages/geopy/location.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/smartystreets.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/google.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/algolia.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/woosmap.py', 'venv/lib/python3.13/site-packages/geographiclib/geodesicline.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/nominatim.py', 'venv/lib/python3.13/site-packages/geopy/adapters.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/baidu.py', 'venv/lib/python3.13/site-packages/geographiclib/polygonarea.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/googlev3.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/photon.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapquest.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodefarm.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/openmapquest.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/azure.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/databc.py', 'venv/lib/python3.13/site-packages/geopy/extra/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/tomtom.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/placefinder.py', 'venv/lib/python3.13/site-packages/geopy/format.py', 'venv/lib/python3.13/site-packages/geographiclib/geodesiccapability.py', 'venv/lib/python3.13/site-packages/geographiclib/geodesic.py', 'venv/lib/python3.13/site-packages/geopy/point.py', 'venv/lib/python3.13/site-packages/geographiclib/test/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/opencage.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodio.py', 'venv/lib/python3.13/site-packages/geopy/timezone.py', 'venv/lib/python3.13/site-packages/geopy/distance.py', 'venv/lib/python3.13/site-packages/geopy/exc.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geonames.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/ignfrance.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/dot_us.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/base.py', 'venv/lib/python3.13/site-packages/geopy/extra/rate_limiter.py', 'venv/lib/python3.13/site-packages/geographiclib/geomath.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/what3words.py', 'venv/lib/python3.13/site-packages/geopy/util.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapbox.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/bing.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapzen.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/arcgis.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/pelias.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/banfrance.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/maptiler.py', 'venv/lib/python3.13/site-packages/geographiclib/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geokeo.py', 'venv/lib/python3.13/site-packages/geographiclib/accumulator.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/here.py', 'venv/lib/python3.13/site-packages/geopy/__init__.py', 'venv/lib/python3.13/site-packages/geographiclib/test/test_geodesic.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/yandex.py', 'venv/lib/python3.13/site-packages/geographiclib/test/test_sign.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/pickpoint.py'. Reloading...
+INFO:     Started server process [30795]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30795]
+INFO:     Started server process [30802]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.13/site-packages/geographiclib/geodesicline.py', 'venv/lib/python3.13/site-packages/geopy/adapters.py', 'venv/lib/python3.13/site-packages/geographiclib/__init__.py', 'venv/lib/python3.13/site-packages/geopy/timezone.py', 'venv/lib/python3.13/site-packages/geopy/distance.py', 'venv/lib/python3.13/site-packages/geopy/exc.py', 'venv/lib/python3.13/site-packages/geopy/compat.py', 'venv/lib/python3.13/site-packages/geographiclib/polygonarea.py', 'venv/lib/python3.13/site-packages/geographiclib/constants.py', 'venv/lib/python3.13/site-packages/geographiclib/accumulator.py', 'venv/lib/python3.13/site-packages/geopy/units.py', 'venv/lib/python3.13/site-packages/geopy/__init__.py', 'venv/lib/python3.13/site-packages/geographiclib/geomath.py', 'venv/lib/python3.13/site-packages/geopy/util.py', 'venv/lib/python3.13/site-packages/geopy/location.py', 'venv/lib/python3.13/site-packages/geopy/format.py', 'venv/lib/python3.13/site-packages/geographiclib/geodesiccapability.py', 'venv/lib/python3.13/site-packages/geographiclib/geodesic.py', 'venv/lib/python3.13/site-packages/geopy/point.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30802]
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.13/site-packages/geopy/geocoders/woosmap.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/maptiler.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/opencage.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodio.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/nominatim.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geonames.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geokeo.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodeearth.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/googlev3.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/here.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/photon.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapquest.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/geocodefarm.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/dot_us.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/base.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/openmapquest.py', 'venv/lib/python3.13/site-packages/geopy/extra/rate_limiter.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/osm.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/azure.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/databc.py', 'venv/lib/python3.13/site-packages/geopy/extra/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/what3words.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapbox.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/yandex.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/smartystreets.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/placefinder.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/bing.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/mapzen.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/pickpoint.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/arcgis.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/pelias.py'. Reloading...
+INFO:     Started server process [30809]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30809]
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.13/site-packages/geopy/geocoders/geolake.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/google.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/algolia.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/baidu.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/tomtom.py', 'venv/lib/python3.13/site-packages/geographiclib/test/__init__.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/ignfrance.py', 'venv/lib/python3.13/site-packages/geopy/geocoders/banfrance.py', 'venv/lib/python3.13/site-packages/geographiclib/test/test_geodesic.py', 'venv/lib/python3.13/site-packages/geographiclib/test/test_sign.py'. Reloading...
+INFO:     Started server process [30811]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30811]
+INFO:     Started server process [30814]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30814]
+INFO:     Started server process [30824]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:20:31 [info     ] Zone whitfield not found. Triggering AI prediction...
+2026-03-28 07:20:31 [info     ] Targeting real-world coordinates for: whitfield
+2026-03-28 07:20:32 [info     ] Found whitfield at: 34.7969288, -84.9745026
+INFO:     127.0.0.1:63133 - "GET /api/v1/city/zones/whitfield HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30824]
+INFO:     Started server process [30846]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:24:12 [info     ] Zone whitfield not found. Triggering AI prediction...
+2026-03-28 07:24:12 [info     ] Targeting real-world coordinates for: whitfield, Bengaluru
+2026-03-28 07:24:13 [info     ] Found whitfield at: 34.7969288, -84.9745026
+INFO:     127.0.0.1:63216 - "GET /api/v1/city/zones/whitfield HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30846]
+INFO:     Started server process [30951]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:26:12 [info     ] Zone whitfield not found. Triggering AI prediction...
+2026-03-28 07:26:12 [info     ] Targeting real-world coordinates for: whitfield, Bengaluru
+2026-03-28 07:26:12 [info     ] Targeting real-world coordinates with strict India filter: whitfield, Bangalore, Karnataka, India
+2026-03-28 07:26:14 [warning  ] Location whitfield not found despite strict filter. Using static fallback for Bengaluru.
+INFO:     127.0.0.1:63256 - "GET /api/v1/city/zones/whitfield HTTP/1.1" 200 OK
+2026-03-28 07:26:58 [info     ] Zone patna not found. Triggering AI prediction...
+2026-03-28 07:26:58 [info     ] Targeting real-world coordinates for: patna, Bengaluru
+2026-03-28 07:26:58 [info     ] Targeting real-world coordinates with strict India filter: patna, Bangalore, Karnataka, India
+2026-03-28 07:26:59 [info     ] Found patna at: 12.9178452, 77.6074222
+INFO:     127.0.0.1:63276 - "GET /api/v1/city/zones/patna HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30951]
+INFO:     Started server process [30990]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30990]
+INFO:     Started server process [31079]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:29:23 [info     ] Zone patna not found. Triggering AI prediction...
+2026-03-28 07:29:23 [info     ] Targeting real-world coordinates for: patna, India
+2026-03-28 07:29:24 [info     ] Successfully found patna at: 25.6093239, 85.1235252
+2026-03-28 07:29:42 [error    ] AI/Geo Processing failed: bad character in group name '?=\\{' at position 14
+INFO:     127.0.0.1:63357 - "GET /api/v1/city/zones/patna HTTP/1.1" 200 OK
+2026-03-28 07:29:59 [info     ] Zone delhi not found. Triggering AI prediction...
+2026-03-28 07:29:59 [info     ] Targeting real-world coordinates for: delhi, India
+2026-03-28 07:30:00 [info     ] Successfully found delhi at: 28.6138954, 77.2090057
+2026-03-28 07:30:17 [error    ] AI/Geo Processing failed: bad character in group name '?=\\{' at position 14
+INFO:     127.0.0.1:63386 - "GET /api/v1/city/zones/delhi HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31079]
+INFO:     Started server process [31116]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:32:49 [info     ] Zone Indiranagar not found. Triggering AI prediction...
+2026-03-28 07:32:49 [info     ] Targeting real-world coordinates for: Indiranagar, India
+2026-03-28 07:32:50 [info     ] Successfully found Indiranagar at: 12.9732913, 77.6404672
+2026-03-28 07:33:00 [error    ] AI/Geo Processing failed: bad character in group name '?=\\{' at position 14
+INFO:     127.0.0.1:63449 - "GET /api/v1/city/zones/Indiranagar HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31116]
+INFO:     Started server process [31217]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31217]
+INFO:     Started server process [31224]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:36:57 [info     ] Zone Indiranagar not found. Triggering AI prediction...
+2026-03-28 07:36:57 [info     ] Targeting real-world coordinates for: Indiranagar, India
+2026-03-28 07:36:58 [info     ] Successfully found Indiranagar at: 12.9732913, 77.6404672
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+2026-03-28 07:37:06 [info     ] Persisting to DB: zone-indiranagar
+2026-03-28 07:37:07 [error    ] Database Save: FAILED - {'message': "Could not find the 'ai_analysis' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:63541 - "GET /api/v1/city/zones/Indiranagar HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31224]
+INFO:     Started server process [31242]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:37:48 [info     ] Zone Indiranagar not found. Triggering AI prediction...
+2026-03-28 07:37:48 [info     ] Targeting real-world coordinates for: Indiranagar, India
+2026-03-28 07:37:49 [info     ] Successfully found Indiranagar at: 12.9732913, 77.6404672
+2026-03-28 07:38:11 [info     ] Persisting enriched strategy for: zone-indiranagar
+2026-03-28 07:38:11 [error    ] Strategy Save: FAILED - {'message': "Could not find the 'ai_analysis' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:63565 - "GET /api/v1/city/zones/Indiranagar HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31242]
+INFO:     Started server process [31266]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31266]
+INFO:     Started server process [31275]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:40:24 [info     ] Zone Indiranagar not found. Triggering AI prediction...
+2026-03-28 07:40:24 [info     ] Targeting real-world coordinates for: Indiranagar, India
+2026-03-28 07:40:24 [info     ] Successfully found Indiranagar at: 12.9732913, 77.6404672
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+2026-03-28 07:40:58 [info     ] Persisting Consensus Master Plan for: zone-indiranagar
+2026-03-28 07:40:59 [error    ] Master Plan Save: FAILED - {'message': "Could not find the 'status' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:63626 - "GET /api/v1/city/zones/Indiranagar HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31275]
+INFO:     Started server process [31288]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31288]
+INFO:     Started server process [31302]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31302]
+INFO:     Started server process [31310]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:43:38 [info     ] Zone Peenya not found. Triggering AI prediction...
+2026-03-28 07:43:38 [info     ] Targeting real-world coordinates for: Peenya, India
+2026-03-28 07:43:38 [info     ] Successfully found Peenya at: 13.0329814, 77.5331801
+2026-03-28 07:44:02 [info     ] Persisting Industrial Tactical Ops for: zone-peenya
+2026-03-28 07:44:03 [error    ] Industrial Tactical Save: FAILED - {'message': "Could not find the 'status' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:63698 - "GET /api/v1/city/zones/Peenya HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31310]
+INFO:     Started server process [31330]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 07:45:28 [info     ] Zone Peenya not found. Triggering AI prediction...
+2026-03-28 07:45:28 [info     ] Targeting real-world coordinates for: Peenya, India
+2026-03-28 07:45:28 [info     ] Successfully found Peenya at: 13.0329814, 77.5331801
+2026-03-28 07:45:58 [info     ] Persisting Industrial Tactical Ops for: zone-peenya
+2026-03-28 07:45:59 [error    ] Industrial Tactical Save: FAILED - {'message': "Could not find the 'status' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:63735 - "GET /api/v1/city/zones/Peenya HTTP/1.1" 200 OK
+2026-03-28 07:51:11 [info     ] Zone Peenya not found. Triggering AI prediction...
+2026-03-28 07:51:11 [info     ] Targeting real-world coordinates for: Peenya, India
+2026-03-28 07:51:11 [info     ] Successfully found Peenya at: 13.0329814, 77.5331801
+2026-03-28 07:51:41 [info     ] Persisting Industrial Tactical Ops for: zone-peenya
+2026-03-28 07:51:42 [error    ] Industrial Tactical Save: FAILED - {'message': "Could not find the 'status' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:63828 - "GET /api/v1/city/zones/Peenya HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31330]
+INFO:     Started server process [31496]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 08:00:16 [info     ] Zone Peenya not found. Triggering AI prediction...
+2026-03-28 08:00:16 [info     ] Targeting real-world coordinates for: Peenya, India
+2026-03-28 08:00:16 [info     ] Successfully found Peenya at: 13.0329814, 77.5331801
+2026-03-28 08:00:48 [info     ] Persisting sanitized data for: zone-peenya
+2026-03-28 08:00:48 [info     ] Database Save: SUCCESS
+INFO:     127.0.0.1:64099 - "GET /api/v1/city/zones/Peenya HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31496]
+INFO:     Started server process [31534]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 08:02:53 [info     ] Zone Whitefield not found. Triggering AI prediction...
+2026-03-28 08:02:53 [info     ] Targeting real-world coordinates for: Whitefield, India
+2026-03-28 08:02:53 [info     ] Successfully found Whitefield at: 12.9963995, 77.7614229
+2026-03-28 08:02:55 [info     ] WAQI Data Received: PM2.5=55, CO=4.6
+2026-03-28 08:03:24 [error    ] Industrial Tactical Engine Failed: name 'db_payload' is not defined
+INFO:     127.0.0.1:64177 - "GET /api/v1/city/zones/Whitefield HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31534]
+INFO:     Started server process [31566]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 08:05:24 [info     ] Zone Whitefield not found. Triggering AI prediction...
+2026-03-28 08:05:24 [info     ] Targeting real-world coordinates for: Whitefield, India
+2026-03-28 08:05:25 [info     ] Successfully found Whitefield at: 12.9963995, 77.7614229
+2026-03-28 08:05:25 [info     ] WAQI Data Received: PM2.5=55, CO=4.6
+2026-03-28 08:05:52 [info     ] Persisting full master plan for: zone-whitefield
+2026-03-28 08:05:53 [error    ] Database Save: FAILED - {'message': "Could not find the 'ai_analysis' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:64225 - "GET /api/v1/city/zones/Whitefield HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31566]
+INFO:     Started server process [31616]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31616]
+INFO:     Started server process [31622]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 08:08:03 [info     ] Zone Whitefield not found. Triggering AI prediction...
+2026-03-28 08:08:03 [info     ] Targeting real-world coordinates for: Whitefield, India
+2026-03-28 08:08:03 [info     ] Successfully found Whitefield at: 12.9963995, 77.7614229
+2026-03-28 08:08:03 [info     ] WAQI Data Received: PM2.5=55, CO=4.6
+2026-03-28 08:08:40 [info     ] Persisting 60-minute High-Frequency simulation for: zone-whitefield
+2026-03-28 08:08:41 [error    ] Simulation Save: FAILED - {'message': "Could not find the 'ai_analysis' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:64278 - "GET /api/v1/city/zones/Whitefield HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31622]
+INFO:     Started server process [31663]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 08:11:21 [info     ] Zone Whitefield not found. Triggering AI prediction...
+2026-03-28 08:11:21 [info     ] Targeting real-world coordinates for: Whitefield, India
+2026-03-28 08:11:21 [info     ] Successfully found Whitefield at: 12.9963995, 77.7614229
+2026-03-28 08:11:23 [info     ] WAQI Data Received: PM2.5=55, CO=4.6
+2026-03-28 08:11:59 [info     ] Reverted to Master Plan for: zone-whitefield
+2026-03-28 08:12:00 [error    ] Database Save: FAILED - {'message': "Could not find the 'ai_analysis' column of 'zones' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:     127.0.0.1:64389 - "GET /api/v1/city/zones/Whitefield HTTP/1.1" 200 OK
+2026-03-28 08:17:31 [info     ] Zone Whitefield not found. Triggering AI prediction...
+2026-03-28 08:17:31 [info     ] Targeting real-world coordinates for: Whitefield, India
+2026-03-28 08:17:31 [info     ] Successfully found Whitefield at: 12.9963995, 77.7614229
+2026-03-28 08:17:32 [info     ] WAQI Data Received: PM2.5=55, CO=4.6
+2026-03-28 08:18:16 [info     ] Reverted to Master Plan for: zone-whitefield
+2026-03-28 08:18:17 [info     ] Database Save: SUCCESS
+INFO:     127.0.0.1:64536 - "GET /api/v1/city/zones/Whitefield HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31663]
+INFO:     Started server process [31927]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 08:22:24 [info     ] Zone Whitefield not found. Triggering AI prediction...
+2026-03-28 08:22:24 [info     ] Targeting real-world coordinates for: Whitefield, India
+2026-03-28 08:22:25 [info     ] Successfully found Whitefield at: 12.9963995, 77.7614229
+2026-03-28 08:22:25 [info     ] WAQI Data Received: PM2.5=55, CO=4.6
+2026-03-28 08:22:57 [info     ] Persisting Full Strategy for: zone-whitefield
+2026-03-28 08:22:58 [info     ] Strategy Save: SUCCESS
+INFO:     127.0.0.1:64650 - "GET /api/v1/city/zones/Whitefield HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64737 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64738 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64739 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64752 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64758 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64758 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64782 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64789 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64789 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64813 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64814 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64815 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64828 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64840 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/routers/scenarios.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31927]
+INFO:     Started server process [33238]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/routers/interventions.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33238]
+WARNING:  WatchFiles detected changes in 'app/routers/interventions.py'. Reloading...
+INFO:     Started server process [33252]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33252]
+INFO:     Started server process [33255]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:64853 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/routers/reports.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33255]
+INFO:     Started server process [33256]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/routers/__init__.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33256]
+INFO:     Started server process [33273]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:64862 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64881 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64893 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64894 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64895 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64922 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64949 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64949 - "GET /api/v1/city/zones HTTP/1.1" 200 OK

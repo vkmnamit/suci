@@ -3,8 +3,11 @@ from .city_forecast_routes import router as city # map city routes
 from .city_forecast_routes import router_forecast as forecast # map forecast routes
 from .rlaif_routes import router as rlaif
 from .chat_routes import router as chat
+from .scenarios import router as scenarios
+from .interventions import router as interventions
+from .reports import router as reports
 
-# Placeholder routers for other modules as defined in main.py
+# Placeholder routers for remaining modules
 from fastapi import APIRouter
 
 def create_placeholder(name):
@@ -14,7 +17,4 @@ def create_placeholder(name):
         return {"module": name, "status": "placeholder"}
     return router
 
-scenarios = create_placeholder("scenarios")
-interventions = create_placeholder("interventions")
-reports = create_placeholder("reports")
 admin = create_placeholder("admin")
