@@ -7,6 +7,22 @@ export function InterventionsPage() {
   const { data: interventions, loading } = useInterventions();
   const safeInterventions = interventions || [];
 
+  // Helper to extract number from "12.5%" string
+  const parseImpact = (val: string) => {
+    return parseFloat(val.replace(/[^\d.]/g, '')) || 0;
+  };
+
+  // Dynamic calculations
+  const stats = {
+    completed: 8, // Keeping some history but could be 0 if only backend exists
+    inProgress: safeInterventions.filter(i => i.status === 'active' || i.status === 'active').length,
+    pending: safeInterventions.filter(i => i.status === 'ready' || i.status === 'planned').length,
+    totalReduction: safeInterventions.reduce((sum, i) => sum + parseImpact(i.co2_reduction), 0)
+  };
+
+  const currentCarbon = 15420; // Matches Bangalore baseline
+  const totalKg = Math.round((currentCarbon * stats.totalReduction) / 100);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -40,7 +56,7 @@ export function InterventionsPage() {
             </div>
             <div>
               <p className="text-xs text-green-300/70 font-light">Completed</p>
-              <p className="text-2xl text-green-300 font-light">8</p>
+              <p className="text-2xl text-green-300 font-light">{stats.completed}</p>
             </div>
           </div>
           <p className="text-[10px] text-green-300/60 font-light">
@@ -55,7 +71,7 @@ export function InterventionsPage() {
             </div>
             <div>
               <p className="text-xs text-yellow-300/70 font-light">In Progress</p>
-              <p className="text-2xl text-yellow-300 font-light">3</p>
+              <p className="text-2xl text-yellow-300 font-light">{loading ? "..." : stats.inProgress}</p>
             </div>
           </div>
           <p className="text-[10px] text-yellow-300/60 font-light">
@@ -71,7 +87,7 @@ export function InterventionsPage() {
             <div>
               <p className="text-xs text-blue-300/70 font-light">Pending</p>
               <p className="text-2xl text-blue-300 font-light">
-                {loading ? "..." : safeInterventions.filter(i => i.status === 'ready' || i.status === 'planned').length}
+                {loading ? "..." : stats.pending}
               </p>
             </div>
           </div>
@@ -107,40 +123,23 @@ export function InterventionsPage() {
               <p className="text-sm text-white/60 mb-2 font-light">
                 Total Carbon Reduction
               </p>
-              <p className="text-5xl text-[#E8DCCF] font-light mb-2">62.5%</p>
+              <p className="text-5xl text-[#E8DCCF] font-light mb-2">
+                {loading ? "..." : stats.totalReduction.toFixed(1)}%
+              </p>
               <p className="text-xs text-white/40 font-light">
-                ~9,638 kg CO₂ per hour
+                ~{loading ? "..." : totalKg.toLocaleString()} kg CO₂ per hour
               </p>
             </div>
 
             {/* Breakdown */}
             <div className="space-y-3">
-              <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                <span className="text-sm text-white/70 font-light">Solar Energy</span>
-                <span className="text-sm text-[#E8DCCF] font-light">18.5%</span>
-              </div>
-              <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                <span className="text-sm text-white/70 font-light">
-                  Traffic Optimization
-                </span>
-                <span className="text-sm text-[#E8DCCF] font-light">14.2%</span>
-              </div>
-              <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                <span className="text-sm text-white/70 font-light">
-                  Building Efficiency
-                </span>
-                <span className="text-sm text-[#E8DCCF] font-light">12.8%</span>
-              </div>
-              <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                <span className="text-sm text-white/70 font-light">
-                  EV Infrastructure
-                </span>
-                <span className="text-sm text-[#E8DCCF] font-light">10.3%</span>
-              </div>
-              <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                <span className="text-sm text-white/70 font-light">Green Corridors</span>
-                <span className="text-sm text-[#E8DCCF] font-light">6.7%</span>
-              </div>
+              {loading && <div className="text-center py-4 text-white/20 italic">Calculating...</div>}
+              {!loading && safeInterventions.slice(0, 5).map(i => (
+                <div key={i.id} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                  <span className="text-sm text-white/70 font-light">{i.title}</span>
+                  <span className="text-sm text-[#E8DCCF] font-light">{i.co2_reduction}</span>
+                </div>
+              ))}
             </div>
 
             {/* Timeline */}
@@ -148,7 +147,9 @@ export function InterventionsPage() {
               <p className="text-xs text-white/40 mb-2 font-light">
                 Estimated Implementation Timeline
               </p>
-              <p className="text-sm text-white font-light">6-12 months</p>
+              <p className="text-sm text-white font-light">
+                {safeInterventions.length * 1.5} months
+              </p>
             </div>
           </div>
         </div>

@@ -20,6 +20,7 @@ langgraph>=0.0.42
 scikit-learn>=1.5.2
 pandas>=2.2.3
 numpy>=2.1.0
+joblib>=1.4.2
 prophet>=1.1.5
 
 # Utilities

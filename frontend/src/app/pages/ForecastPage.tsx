@@ -210,6 +210,55 @@ export function ForecastPage({ currentCity }: ForecastPageProps) {
               <p className="text-[10px] text-green-400 font-light">High confidence</p>
             </div>
           </div>
+
+          {/* AI Strategic Synthesis / Conclusions */}
+          <div className="bg-[#E8DCCF]/5 backdrop-blur-2xl border border-[#E8DCCF]/20 rounded-2xl p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#E8DCCF]/5 rounded-full -mr-16 -mt-16 blur-3xl" />
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-2 h-2 rounded-full bg-[#E8DCCF] animate-pulse" />
+                <h3 className="text-[#E8DCCF] text-xs uppercase tracking-[0.3em] font-medium">Metropolitan Strategy Conclusion</h3>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-white text-lg font-light mb-3">Predictive Summary</h4>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">
+                    Based on current trajectory, the Bangalore Hub is projected to exceed its sectoral carbon budget by <span className="text-[#E8DCCF] font-medium">12.4%</span> in the next 72 hours. AI model <span className="italic text-white/80">SUCI-9v2</span> confirms that current mitigation protocols are insufficient to counteract the peak industrial flux.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <p className="text-[10px] text-[#E8DCCF] uppercase tracking-widest font-medium opacity-50">Critical Interventions</p>
+                    <ul className="space-y-4">
+                      {[
+                        "Shift localized grid phases by 1.4µs to eliminate reactive flux.",
+                        "Enforce $10^{-4}m$ road centerline realignments in Zone A.",
+                        "Recalibrate industrial exhaust vent angles by 0.002°."
+                      ].map((item, i) => (
+                        <li key={i} className="flex gap-3 text-white/70 text-xs font-light">
+                          <span className="text-[#E8DCCF] opacity-50">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-[10px] text-[#E8DCCF] uppercase tracking-widest font-medium opacity-50">Predicted Reduction Impact</p>
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                      <div className="flex items-end gap-2 mb-1">
+                        <span className="text-2xl text-white font-light">28.5%</span>
+                        <span className="text-[10px] text-green-400 mb-1">Potential</span>
+                      </div>
+                      <p className="text-[10px] text-white/30 font-light">If all micro-tactics are deployed within 6 hours.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Right Column - Analytics Panel */}

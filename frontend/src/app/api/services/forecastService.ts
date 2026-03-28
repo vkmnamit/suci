@@ -22,4 +22,9 @@ export const forecastService = {
   async getCityForecast(): Promise<ApiCityForecast> {
     return apiClient.get<ApiCityForecast>("/forecast/all-zones");
   },
+
+  /** GET /forecast/map-trend — Predictive carbon trends for map */
+  async getMapTrend(): Promise<{ trends: any[] }> {
+    return apiClient.get<{ trends: any[] }>("/forecast/map-trend");
+  },
 };

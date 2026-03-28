@@ -1,8 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.services.city_graph import city_graph_service
 from app.services.forecast import ForecastService, get_forecast_service
-from app.db.database_clients import get_db_session
-from sqlalchemy.ext.asyncio import AsyncSession
+from app.services.models import model_service
 from typing import List, Dict
 
 # --- City Router ---
@@ -47,11 +46,32 @@ async def get_energy_forecast(zone_id: str, hours: int = 6, forecast_service: Fo
     comparison = await forecast_service.get_forecast_comparison(zone_id, horizon_hours=hours)
     return comparison
 
-@forecast_router.get("/all-zones")
-async def get_all_zone_forecasts():
-    """Fetch carbon and energy forecast summaries for every city zone."""
+@forecast_router.get("/map-trend")
+async def get_map_trend(forecast_service: ForecastService = Depends(get_forecast_service)):
+    """Fetch predictive carbon trends for every city zone for map visualization."""
     zones = await city_graph_service.get_all_zones()
-    return {"summary": "Total city forecast data", "zones": len(zones)}
+    trend_data = []
+    
+    for zone in zones:
+        profile = zone.get("profile", {})
+        # Use ML model to predict next state
+        prediction = model_service.predict(
+            traffic_density=profile.get("traffic_density", 50),
+            energy_consumption=profile.get("energy_consumption", 300),
+            renewable_percentage=profile.get("renewable_percentage", 30),
+            temperature=profile.get("temperature", 25)
+        )
+        
+        trend_data.append({
+            "zone_id": zone.get("id"),
+            "current_carbon": profile.get("carbon_score", 0),
+            "predicted_carbon": prediction.get("carbon_intensity", 0),
+            "current_energy": profile.get("energy_consumption", 0),
+            "predicted_energy": prediction.get("energy_consumption", 0),
+            "trend": "UP" if prediction.get("carbon_intensity", 0) > profile.get("carbon_score", 0) else "DOWN"
+        })
+        
+    return {"trends": trend_data}
 
 router = city_router
 router_forecast = forecast_router

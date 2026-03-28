@@ -41,6 +41,42 @@ async def get_interventions():
             "cost": "€1.2M",
             "co2_reduction": "6.8%",
             "status": "active"
+        },
+        {
+            "id": "int-5",
+            "title": "Urban Reforestation",
+            "description": "Planting 10,000 native trees across industrial fringes.",
+            "impact": "Medium",
+            "cost": "€0.3M",
+            "co2_reduction": "4.5%",
+            "status": "planned"
+        },
+        {
+            "id": "int-6",
+            "title": "Smart Street Lighting",
+            "description": "IoT-enabled motion sensing LED grid.",
+            "impact": "Low",
+            "cost": "€0.5M",
+            "co2_reduction": "2.1%",
+            "status": "ready"
+        },
+        {
+            "id": "int-7",
+            "title": "Waste-to-Energy",
+            "description": "Methane capture from central landfill.",
+            "impact": "High",
+            "cost": "€3.5M",
+            "co2_reduction": "11.2%",
+            "status": "ready"
+        },
+        {
+            "id": "int-8",
+            "title": "Industrial CCUS",
+            "description": "Carbon capture for steel manufacturing zones.",
+            "impact": "High",
+            "cost": "€12.0M",
+            "co2_reduction": "22.3%",
+            "status": "planned"
         }
     ]
 

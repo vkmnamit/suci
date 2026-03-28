@@ -28,7 +28,6 @@ const menuItems = [
   { id: "scenarios", label: "Scenarios", icon: Sliders },
   { id: "interventions", label: "Interventions", icon: Lightbulb },
   { id: "reports", label: "Reports", icon: FileText },
-  { id: "settings", label: "Settings", icon: Settings },
 ];
 
 export function Sidebar({ 

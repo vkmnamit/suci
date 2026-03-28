@@ -47,9 +47,16 @@ export function RecommendationCards() {
             Ranked by carbon reduction impact
           </p>
         </div>
-        <div className="w-10 h-10 rounded-xl bg-[#E8DCCF]/10 flex items-center justify-center">
-          <Sparkles className="w-5 h-5 text-[#E8DCCF]" />
-        </div>
+        <button 
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent("suci-open-chat", { 
+              detail: { message: "Analyze the current city recommendations and provide a tactical implementation strategy." } 
+            }));
+          }}
+          className="w-10 h-10 rounded-xl bg-[#E8DCCF]/10 hover:bg-[#E8DCCF]/20 flex items-center justify-center transition-all active:scale-95 group"
+        >
+          <Sparkles className="w-5 h-5 text-[#E8DCCF] group-hover:rotate-12 transition-transform" />
+        </button>
       </div>
 
       <div className="space-y-3">

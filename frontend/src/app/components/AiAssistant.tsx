@@ -1,14 +1,26 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageSquare, Send, X, Bot, Sparkles, User, FileText, Terminal } from "lucide-react";
+import { MessageSquare, Send, X, User, Terminal, Bot } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useChat } from "../hooks/useChat";
-import { Button } from "./ui/button";
+import ReactMarkdown from "react-markdown";
 
 export function AiAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
-  const { messages, isLoading, sendMessageStream, generateBriefing } = useChat();
+  const { messages, isLoading, sendMessage } = useChat();
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // External trigger listener for dashboard integration
+  useEffect(() => {
+    const handleExternalOpen = (e: any) => {
+      setIsOpen(true);
+      if (e.detail?.message) {
+        sendMessage(e.detail.message);
+      }
+    };
+    window.addEventListener("suci-open-chat", handleExternalOpen);
+    return () => window.removeEventListener("suci-open-chat", handleExternalOpen);
+  }, [sendMessage]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -24,7 +36,7 @@ export function AiAssistant() {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    sendMessageStream(input);
+    sendMessage(input);
     setInput("");
   };
 
@@ -32,13 +44,10 @@ export function AiAssistant() {
     <>
       {/* Floating Toggle Button */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-[#E8DCCF] text-[#0B0B0B] shadow-2xl z-50 flex items-center justify-center border-4 border-black/20"
       >
         <MessageSquare className="w-6 h-6" />
-        <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-[#0B0B0B]"></div>
       </motion.button>
 
       {/* Chat Window */}
@@ -52,18 +61,12 @@ export function AiAssistant() {
           >
             {/* Header */}
             <div className="p-4 border-b border-white/10 flex items-center justify-between bg-white/5">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#E8DCCF]/10 flex items-center justify-center">
-                  <Bot className="w-6 h-6 text-[#E8DCCF]" />
-                </div>
                 <div>
-                  <h3 className="text-sm font-medium text-white">SUCI Reasoning AI</h3>
+                  <h3 className="text-sm font-medium text-white">SUCI Intelligence Terminal</h3>
                   <div className="flex items-center gap-1.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                    <span className="text-[10px] text-white/40">Connected to local model</span>
+                    <span className="text-[10px] text-white/40 uppercase tracking-widest">Quantum Link Active</span>
                   </div>
                 </div>
-              </div>
               <button 
                 onClick={() => setIsOpen(false)}
                 className="p-2 hover:bg-white/10 rounded-lg transition-colors"
@@ -76,20 +79,7 @@ export function AiAssistant() {
             <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
               {messages.length === 0 && (
                 <div className="h-full flex flex-col items-center justify-center text-center p-8">
-                  <div className="w-16 h-16 rounded-2xl bg-[#E8DCCF]/5 flex items-center justify-center mb-4">
-                    <Sparkles className="w-8 h-8 text-[#E8DCCF]/40" />
-                  </div>
-                  <h4 className="text-white font-medium mb-2">How can I help you today?</h4>
-                  <p className="text-xs text-white/40 leading-relaxed mb-6">
-                    Ask me about city carbon trends, energy forecasts, or generate a morning climate briefing.
-                  </p>
-                  <Button 
-                    variant="outline"
-                    onClick={() => generateBriefing()}
-                    className="border-[#E8DCCF]/30 text-[#E8DCCF] hover:bg-[#E8DCCF]/10 h-9 px-4 text-xs font-light"
-                  >
-                    Generate Morning Briefing
-                  </Button>
+                  <p className="text-white/20 text-xs font-light tracking-widest uppercase italic">Initializing Secure Link...</p>
                 </div>
               )}
 
@@ -102,21 +92,57 @@ export function AiAssistant() {
                     <div className={`w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center ${
                       m.role === 'user' ? 'bg-[#E8DCCF]/20' : 'bg-white/10'
                     }`}>
-                      {m.role === 'user' ? <User className="w-4 h-4 text-[#E8DCCF]" /> : <Bot className="w-4 h-4 text-white" />}
+                      {m.role === 'user' ? <User className="w-4 h-4 text-[#E8DCCF]" /> : <div className="w-4 h-4 flex items-center justify-center text-white/40 text-[10px] uppercase font-bold tracking-tighter">AI</div>}
                     </div>
-                    <div className={`p-3 rounded-2xl text-xs leading-relaxed whitespace-pre-wrap ${
+                    <div className={`p-3 rounded-2xl text-xs leading-relaxed ${
                       m.role === 'user' 
-                        ? 'bg-[#E8DCCF] text-[#0B0B0B] rounded-tr-none' 
-                        : 'bg-white/5 text-white/90 border border-white/10 rounded-tl-none'
+                        ? 'bg-[#E8DCCF] text-[#0B0B0B] rounded-tr-none shadow-lg whitespace-pre-wrap' 
+                        : 'bg-white/5 text-white/90 border border-white/10 rounded-tl-none prose prose-invert prose-xs max-w-none'
                     }`}>
-                      {m.content}
-                      {m.isStreaming && (
-                        <span className="inline-block w-1.5 h-4 ml-1 bg-[#E8DCCF] animate-pulse align-middle"></span>
+                      {m.role === 'assistant' ? (
+                        <Typewriter text={m.content} />
+                      ) : (
+                        m.content
                       )}
                     </div>
                   </div>
                 </div>
               ))}
+
+              {/* Thinking Effect */}
+              {isLoading && (
+                <motion.div 
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="flex justify-start"
+                >
+                  <div className="flex gap-3 max-w-[85%]">
+                    <div className="w-8 h-8 rounded-lg bg-white/10 flex-shrink-0 flex items-center justify-center border border-white/5 animate-pulse">
+                      <Terminal className="w-4 h-4 text-white/40" />
+                    </div>
+                    <div className="p-3 bg-white/5 border border-white/10 rounded-2xl rounded-tl-none flex items-center gap-3">
+                      <div className="flex gap-1">
+                        <motion.span 
+                          animate={{ opacity: [0.2, 1, 0.2] }} 
+                          transition={{ repeat: Infinity, duration: 1.4, times: [0, 0.5, 1] }} 
+                          className="w-1.5 h-1.5 rounded-full bg-[#E8DCCF]"
+                        />
+                        <motion.span 
+                          animate={{ opacity: [0.2, 1, 0.2] }} 
+                          transition={{ repeat: Infinity, duration: 1.4, delay: 0.2, times: [0, 0.5, 1] }} 
+                          className="w-1.5 h-1.5 rounded-full bg-[#E8DCCF]"
+                        />
+                        <motion.span 
+                          animate={{ opacity: [0.2, 1, 0.2] }} 
+                          transition={{ repeat: Infinity, duration: 1.4, delay: 0.4, times: [0, 0.5, 1] }} 
+                          className="w-1.5 h-1.5 rounded-full bg-[#E8DCCF]"
+                        />
+                      </div>
+                      <span className="text-[10px] text-white/40 uppercase tracking-widest font-light animate-pulse">Thinking...</span>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
               <div ref={messagesEndRef} />
             </div>
 
@@ -138,14 +164,30 @@ export function AiAssistant() {
                   <Send className="w-4 h-4" />
                 </button>
               </div>
-              <div className="mt-3 flex items-center gap-4 text-[10px] text-white/30 font-light px-1">
-                <span className="flex items-center gap-1"><Sparkles className="w-3 h-3" /> AI Reasoning</span>
-                <span className="flex items-center gap-1"><Terminal className="w-3 h-3" /> Local Model</span>
-              </div>
             </form>
           </motion.div>
         )}
       </AnimatePresence>
     </>
   );
+}
+
+function Typewriter({ text }: { text: string }) {
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (displayedText.length >= text.length) return;
+
+    if (index < text.length) {
+      const randomDelay = Math.random() * 25 + 5;
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + text[index]);
+        setIndex((prev) => prev + 1);
+      }, randomDelay);
+      return () => clearTimeout(timeout);
+    }
+  }, [index, text, displayedText]);
+
+  return <ReactMarkdown>{displayedText}</ReactMarkdown>;
 }

@@ -32,8 +32,8 @@ async def send_chat_message(
         return StreamingResponse(response_streamer(), media_type="text/event-stream")
     
     else:
-        # Simplified: fetch non-streaming response from ChatService
-        response = await chat_service.generate_morning_briefing() # Placeholder for direct message
+        # Fetch non-streaming response from ChatService
+        response = await chat_service.send_message(message, history)
         return {"response": response}
 
 @chat_router.post("/briefing")

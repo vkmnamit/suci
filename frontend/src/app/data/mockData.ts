@@ -11,6 +11,8 @@ export interface Zone {
   humidity: number; // percentage
   airQuality: number; // AQI
   population: number;
+  status?: string;
+  alertLevel?: string;
 }
 
 export interface City {

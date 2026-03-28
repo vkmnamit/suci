@@ -11,13 +11,11 @@ interface CityMapProps {
 export function CityMap({ zones, selectedZone, onZoneSelect }: CityMapProps) {
   const [hoveredZone, setHoveredZone] = useState<string | null>(null);
 
-  // Calculate color based on carbon emission (heatmap)
-  const getZoneColor = (emission: number) => {
-    if (emission < 2000) return "#F5F1E8"; // Light beige - low
-    if (emission < 3000) return "#E8DCCF"; // Medium beige
-    if (emission < 3500) return "#D4C5B3"; // Darker beige
-    if (emission < 4000) return "#B8A393"; // Alert tone
-    return "#9A8376"; // High alert - dark tone
+  // Calculate color based on carbon emission (heatmap) and operational status
+  const getZoneColor = (emission: number, status?: string) => {
+    if (status === "CRITICAL" || emission > 3500) return "#EF4444"; // Red - Critical
+    if (status === "HIGH" || emission > 2500) return "#F59E0B"; // Yellow/Amber - Moderate
+    return "#10B981"; // Green - Optimal
   };
 
   const getZoneOpacity = (zoneId: string) => {
@@ -73,24 +71,26 @@ export function CityMap({ zones, selectedZone, onZoneSelect }: CityMapProps) {
               y={zone.coordinates.y}
               width={zone.coordinates.width}
               height={zone.coordinates.height}
-              fill={getZoneColor(zone.carbonEmission)}
+              fill={getZoneColor(zone.carbonEmission, zone.status)}
               opacity={getZoneOpacity(zone.id)}
               stroke={
-                selectedZone?.id === zone.id
+                zone.status === "CRITICAL"
+                  ? "#EF4444" 
+                  : selectedZone?.id === zone.id
                   ? "#E8DCCF"
                   : hoveredZone === zone.id
                   ? "#E8DCCF"
                   : "#FFFFFF"
               }
-              strokeWidth={selectedZone?.id === zone.id ? 3 : 1.5}
-              strokeOpacity={selectedZone?.id === zone.id ? 0.8 : 0.3}
+              strokeWidth={zone.status === "CRITICAL" ? 4 : (selectedZone?.id === zone.id ? 3 : 1.5)}
+              strokeOpacity={zone.status === "CRITICAL" ? 0.9 : (selectedZone?.id === zone.id ? 0.8 : 0.3)}
               rx={8}
               filter={
-                selectedZone?.id === zone.id || hoveredZone === zone.id
+                zone.status === "CRITICAL" || selectedZone?.id === zone.id || hoveredZone === zone.id
                   ? "url(#hover-glow)"
                   : "url(#glow)"
               }
-              className="cursor-pointer transition-all duration-300"
+              className={`cursor-pointer transition-all duration-300 ${zone.status === "CRITICAL" ? "animate-pulse" : ""}`}
               onMouseEnter={() => setHoveredZone(zone.id)}
               onMouseLeave={() => setHoveredZone(null)}
               onClick={() => onZoneSelect(zone)}
@@ -134,19 +134,15 @@ export function CityMap({ zones, selectedZone, onZoneSelect }: CityMapProps) {
         </p>
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5">
-            <div className="w-6 h-3 rounded-sm bg-[#F5F1E8]"></div>
-            <span className="text-[10px] text-white/60">Low</span>
+            <div className="w-6 h-3 rounded-sm bg-[#10B981]"></div>
+            <span className="text-[10px] text-white/60">Optimal</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="w-6 h-3 rounded-sm bg-[#E8DCCF]"></div>
-            <span className="text-[10px] text-white/60">Medium</span>
+            <div className="w-6 h-3 rounded-sm bg-[#F59E0B]"></div>
+            <span className="text-[10px] text-white/60">Moderate</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="w-6 h-3 rounded-sm bg-[#B8A393]"></div>
-            <span className="text-[10px] text-white/60">High</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <div className="w-6 h-3 rounded-sm bg-[#9A8376]"></div>
+            <div className="w-6 h-3 rounded-sm bg-[#EF4444]"></div>
             <span className="text-[10px] text-white/60">Critical</span>
           </div>
         </div>

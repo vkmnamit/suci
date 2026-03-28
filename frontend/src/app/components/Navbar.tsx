@@ -48,12 +48,16 @@ export function Navbar({
             <SelectTrigger className="w-[180px] bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-[#0B0B0B] border-white/10">
-              <SelectItem value="bangalore">
-                Bangalore
-              </SelectItem>
-              <SelectItem value="delhi">Delhi</SelectItem>
-              <SelectItem value="mumbai">Mumbai</SelectItem>
+            <SelectContent className="bg-[#0B0B0B] border-white/10 text-white">
+      <SelectItem value="bangalore" className="text-white focus:bg-white/10 focus:text-white cursor-pointer transition-colors">
+        Bangalore Hub
+      </SelectItem>
+      <SelectItem value="delhi" className="text-white focus:bg-white/10 focus:text-white cursor-pointer transition-colors">
+        Delhi NCR Region
+      </SelectItem>
+      <SelectItem value="mumbai" className="text-white focus:bg-white/10 focus:text-white cursor-pointer transition-colors">
+        Mumbai Metropol
+      </SelectItem>
             </SelectContent>
           </Select>
         </div>

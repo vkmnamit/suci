@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Slider } from "./ui/slider";
 import { Button } from "./ui/button";
-import { Play, RotateCcw, TrendingDown, Sun } from "lucide-react";
+import { Play, RotateCcw, TrendingDown, Sun, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface SimulationPanelProps {
@@ -14,18 +14,39 @@ export function SimulationPanel({ currentCarbon }: SimulationPanelProps) {
   const [solar, setSolar] = useState([32]);
   const [showResults, setShowResults] = useState(false);
   const [simulatedCarbon, setSimulatedCarbon] = useState(0);
+  const [isSimulating, setIsSimulating] = useState(false);
+  const [aiReasoning, setAiReasoning] = useState("");
+  const [suggestions, setSuggestions] = useState<string[]>([]);
 
-  const runSimulation = () => {
-    // Simple calculation for carbon reduction
-    const trafficImpact = (100 - traffic[0]) * 0.15;
-    const energyImpact = (100 - energy[0]) * 0.12;
-    const solarImpact = solar[0] * 0.18;
-    
-    const totalReduction = trafficImpact + energyImpact + solarImpact;
-    const newCarbon = Math.max(currentCarbon * (1 - totalReduction / 100), currentCarbon * 0.3);
-    
-    setSimulatedCarbon(Math.round(newCarbon));
-    setShowResults(true);
+  const runSimulation = async () => {
+    if (isSimulating) return;
+    setIsSimulating(true);
+    try {
+      const resp = await fetch(`http://localhost:8000/api/v1/scenarios/simulate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          traffic: traffic[0],
+          energy: energy[0],
+          solar: solar[0]
+        }),
+      });
+      const data = await resp.json();
+      
+      const reductionVal = data.calculated_reduction || 0;
+      // Ensure we have a base to calculate from
+      const baseCarbon = currentCarbon > 0 ? currentCarbon : 1250;
+      const newCarbon = baseCarbon * (1 - reductionVal / 100);
+      
+      setSimulatedCarbon(Math.round(newCarbon));
+      setAiReasoning(data.reasoning || "");
+      setSuggestions(data.suggestions || []);
+      setShowResults(true);
+    } catch (e) {
+      console.error("Simulation failed:", e);
+    } finally {
+      setIsSimulating(false);
+    }
   };
 
   const resetSimulation = () => {
@@ -33,9 +54,11 @@ export function SimulationPanel({ currentCarbon }: SimulationPanelProps) {
     setEnergy([65]);
     setSolar([32]);
     setShowResults(false);
+    setAiReasoning("");
+    setSuggestions([]);
   };
 
-  const reduction = showResults
+  const reductionPercent = showResults
     ? Math.round(((currentCarbon - simulatedCarbon) / currentCarbon) * 100)
     : 0;
 
@@ -129,19 +152,73 @@ export function SimulationPanel({ currentCarbon }: SimulationPanelProps) {
       <div className="flex gap-3 mb-6">
         <Button
           onClick={runSimulation}
-          className="flex-1 bg-[#E8DCCF] hover:bg-[#D4C5B3] text-[#0B0B0B] font-light transition-all duration-300"
+          disabled={isSimulating}
+          className="flex-1 bg-[#E8DCCF] hover:bg-[#D4C5B3] text-[#0B0B0B] font-light transition-all duration-300 h-11 relative overflow-hidden group shadow-[0_0_20px_rgba(232,220,207,0.1)]"
         >
-          <Play className="w-4 h-4 mr-2" />
-          Run Simulation
+          {isSimulating ? (
+            <div className="flex items-center justify-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#0B0B0B] animate-pulse" />
+              <span className="text-[11px] uppercase tracking-[0.2em] font-medium">Thinking</span>
+            </div>
+          ) : (
+            <div className="flex items-center justify-center gap-2">
+              <Play className="w-4 h-4" />
+              <span className="text-[11px] uppercase tracking-[0.2em] font-medium">Initiate Simulation</span>
+            </div>
+          )}
+          
+          {/* Subtle scanline effect when thinking */}
+          {isSimulating && (
+            <motion.div 
+              initial={{ x: "-100%" }}
+              animate={{ x: "100%" }}
+              transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent w-full skew-x-12"
+            />
+          )}
         </Button>
         <Button
           onClick={resetSimulation}
           variant="outline"
-          className="border-white/20 hover:bg-white/5 text-white font-light"
+          disabled={isSimulating}
+          className="border-white/10 hover:bg-white/5 text-white/40 h-11 w-11 p-0 transition-all duration-300"
         >
-          <RotateCcw className="w-4 h-4" />
+          <RotateCcw className="w-4 h-4 transition-transform group-hover:rotate-180" />
         </Button>
       </div>
+
+      {/* Save & Report Actions (Visible after simulation) */}
+      <AnimatePresence>
+        {showResults && !isSimulating && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className="flex gap-3 mb-6"
+          >
+            <Button
+              onClick={async () => {
+                const resp = await fetch(`http://localhost:8000/api/v1/scenarios/generate-report`, {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    traffic: traffic[0],
+                    solar: solar[0],
+                    energy: energy[0],
+                    calculated_reduction: reductionPercent
+                  }),
+                });
+                const data = await resp.json();
+                alert(`Strategic Report Generated: ${data.filename}\n\nScenario ID: ${data.scenario_id}`);
+              }}
+              className="flex-1 bg-white/10 hover:bg-white/20 text-[#E8DCCF] border border-[#E8DCCF]/20 font-light h-10 text-[10px] uppercase tracking-widest"
+            >
+              <FileText className="w-3.5 h-3.5 mr-2" />
+              Save & Generate Report
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Results */}
       <AnimatePresence>
@@ -189,6 +266,41 @@ export function SimulationPanel({ currentCarbon }: SimulationPanelProps) {
                 </div>
               </div>
 
+              {/* AI Reasoning */}
+              {aiReasoning && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-4 p-4 rounded-xl bg-white/5 border border-white/10"
+                >
+                  <p className="text-[11px] text-[#E8DCCF] mb-1 font-medium tracking-tight uppercase opacity-80">Tactical AI Insight</p>
+                  <p className="text-xs text-white/70 font-light leading-relaxed italic">
+                    {aiReasoning}
+                  </p>
+                </motion.div>
+              )}
+
+              {/* Tactical Suggestions */}
+              {suggestions.length > 0 && (
+                <div className="mt-4 space-y-2">
+                  <p className="text-[11px] text-[#E8DCCF] mb-2 font-medium tracking-tight uppercase opacity-80 ml-1">AI Tactical Suggestions</p>
+                  {suggestions.map((s, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 + i * 0.1 }}
+                      className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/5 group hover:border-[#E8DCCF]/20 transition-all duration-300"
+                    >
+                      <div className="mt-1 w-1.5 h-1.5 rounded-full bg-[#E8DCCF] shrink-0" />
+                      <p className="text-xs text-white/70 font-light leading-snug">
+                        {s}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+
               {/* Impact Summary */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -212,7 +324,7 @@ export function SimulationPanel({ currentCarbon }: SimulationPanelProps) {
                   </div>
                   <div className="text-right">
                     <p className="text-2xl text-green-400 font-light">
-                      {reduction}%
+                      {reductionPercent}%
                     </p>
                   </div>
                 </div>

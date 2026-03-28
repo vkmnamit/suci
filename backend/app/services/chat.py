@@ -61,6 +61,33 @@ class ChatService:
         async for chunk in stream:
             yield chunk['message']['content']
 
+    async def send_message(self, message: str, history: List[Dict[str, str]]) -> str:
+        """Send a message to Ollama (qwen2.5:7b) and get a full response."""
+        city_context = await self.build_city_context()
+        
+        system_prompt = f"""
+        You are SUCI (Self-Improving Urban Climate Intelligence), a specialized AI city climate analyst.
+        Your goal is to provide actionable insights into urban carbon emissions and energy demand.
+        
+        CONTEXT:
+        {city_context}
+        
+        INSTRUCTIONS:
+        1. Be precise and data-driven. Use zone names and numbers from the context.
+        2. Keep responses focused on climate impact and intervention recommendations.
+        3. Format any intervention recommendations clearly with 'Action', 'Predicted carbon reduction', and 'Cost'.
+        4. If the user asks about a specific zone, focus your analysis on that zone.
+        """
+
+        messages = [{"role": "system", "content": system_prompt}] + history + [{"role": "user", "content": message}]
+
+        response = await self.client.chat(
+            model=self.model,
+            messages=messages,
+            stream=False,
+        )
+        return response['message']['content']
+
     async def generate_morning_briefing(self) -> str:
         """Generate a summarized briefing of the city's status for the operator."""
         city_context = await self.build_city_context()

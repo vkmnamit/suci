@@ -37,6 +37,38 @@ async def get_reports():
             "type": "Model Performance",
             "status": "Processing",
             "size": "0.5MB"
+        },
+        {
+            "id": "rep-5",
+            "title": "Quarterly Urban Sustainability Audit Q1",
+            "date": "2026-03-27",
+            "type": "Sustainability",
+            "status": "Finalized",
+            "size": "12.2MB"
+        },
+        {
+            "id": "rep-6",
+            "title": "Industrial Emission Compliance - North",
+            "date": "2026-03-27",
+            "type": "Audit",
+            "status": "Finalized",
+            "size": "3.5MB"
+        },
+        {
+            "id": "rep-7",
+            "title": "Smart Grid Health Log",
+            "date": "2026-03-28",
+            "type": "Infrastructure",
+            "status": "Ready",
+            "size": "0.8MB"
+        },
+        {
+            "id": "rep-8",
+            "title": "Renewable Energy Transition Forecast",
+            "date": "2026-03-28",
+            "type": "Predictive",
+            "status": "Draft",
+            "size": "2.9MB"
         }
     ]
 

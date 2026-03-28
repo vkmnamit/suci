@@ -23,8 +23,10 @@ export interface ApiZone {
   zone_id?: string;
   name: string;
   carbon_emission?: number;
+  carbon_intensity?: number;
   carbonEmission?: number;
   energy_usage?: number;
+  energy_consumption?: number;
   energyUsage?: number;
   renewable_percentage?: number;
   renewablePercentage?: number;
@@ -32,11 +34,14 @@ export interface ApiZone {
   buildings?: ApiBuilding[];
   substations?: ApiSubstation[];
   traffic_level?: number;
+  traffic_density?: number;
   trafficLevel?: number;
   temperature?: number;
   humidity?: number;
   air_quality?: number;
   airQuality?: number;
+  lat?: number;
+  lng?: number;
 }
 
 export interface ApiBuilding {

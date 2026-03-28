@@ -1,0 +1,1487 @@
+INFO:     Will watch for changes in these directories: ['/Users/namitraj/Desktop/suci/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [43408] using WatchFiles
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:25:50 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [43451]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:50949 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50955 - "OPTIONS /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50955 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50971 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50957 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51005 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51005 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51016 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/chat.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [43451]
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:26:47 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [43509]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/routers/chat_routes.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [43509]
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:26:52 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [43515]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:51033 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51036 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51041 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51049 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51049 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51062 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51068 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51070 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51068 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51089 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51092 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51095 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51095 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51117 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51124 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51122 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51141 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51168 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51151 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51180 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51184 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51184 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51199 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51204 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51214 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51221 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51238 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51238 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51259 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51259 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51263 - "OPTIONS /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51263 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51269 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51265 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51281 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51283 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51286 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:32:24 [info     ] Zone Indiranagar not found. Triggering AI prediction...
+2026-03-28 09:32:24 [info     ] Targeting real-world coordinates for: Indiranagar, India
+2026-03-28 09:32:25 [info     ] Successfully found Indiranagar at: 12.9732913, 77.6404672
+INFO:     127.0.0.1:51329 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:32:26 [info     ] WAQI Data Received: PM2.5=53, CO=4.6
+INFO:     127.0.0.1:51344 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51329 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51368 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51373 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51381 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51383 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:33:03 [info     ] Persisting Full Strategy for: zone-indiranagar
+2026-03-28 09:33:03 [info     ] Strategy Save: SUCCESS
+INFO:     127.0.0.1:51323 - "GET /api/v1/city/zones/Indiranagar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51393 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51400 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51415 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51418 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51421 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51375 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51375 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51446 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51459 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51485 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51488 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51490 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51485 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51492 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51496 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51497 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51494 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51514 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51516 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51541 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51541 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:35:54 [info     ] Zone KR Puram not found. Triggering AI prediction...
+2026-03-28 09:35:54 [info     ] Targeting real-world coordinates for: KR Puram, India
+2026-03-28 09:35:55 [info     ] Successfully found KR Puram at: 13.007516, 77.695935
+2026-03-28 09:35:55 [info     ] WAQI Data Received: PM2.5=53, CO=4.6
+INFO:     127.0.0.1:51561 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51563 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:36:28 [info     ] Persisting Full Strategy for: zone-kr-puram
+2026-03-28 09:36:29 [info     ] Strategy Save: SUCCESS
+INFO:     127.0.0.1:51544 - "GET /api/v1/city/zones/KR%20Puram HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51577 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51578 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+2026-03-28 09:36:48 [info     ] Zone Marathahalli not found. Triggering AI prediction...
+2026-03-28 09:36:48 [info     ] Targeting real-world coordinates for: Marathahalli, India
+2026-03-28 09:36:49 [info     ] Successfully found Marathahalli at: 12.9552572, 77.6984163
+INFO:     127.0.0.1:51577 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51578 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:36:50 [info     ] WAQI Data Received: PM2.5=53, CO=4.6
+INFO:     127.0.0.1:51601 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51604 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:37:21 [info     ] Persisting Full Strategy for: zone-marathahalli
+2026-03-28 09:37:22 [info     ] Strategy Save: SUCCESS
+INFO:     127.0.0.1:51580 - "GET /api/v1/city/zones/Marathahalli HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51641 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51644 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51641 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51644 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51652 - "OPTIONS /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51654 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51669 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51652 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51652 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51698 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51702 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51708 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51728 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51733 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:39:36 [info     ] Zone Electronic City not found. Triggering AI prediction...
+2026-03-28 09:39:36 [info     ] Targeting real-world coordinates for: Electronic City, India
+2026-03-28 09:39:37 [info     ] Successfully found Electronic City at: 12.8436448, 77.6686835
+2026-03-28 09:39:38 [info     ] WAQI Data Received: PM2.5=53, CO=4.6
+INFO:     127.0.0.1:51756 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51760 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51762 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51766 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51776 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51782 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51779 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51788 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51790 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51786 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51809 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51830 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51842 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51845 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51842 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51870 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51882 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51897 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51911 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51912 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51912 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51920 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:42:20 [info     ] Persisting Full Strategy for: zone-electronic-city
+2026-03-28 09:42:20 [info     ] Strategy Save: SUCCESS
+INFO:     127.0.0.1:51747 - "GET /api/v1/city/zones/Electronic%20City HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51926 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51925 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51925 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51938 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51941 - "GET /api/v1/forecast/all-zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51951 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51958 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/routers/city_forecast_routes.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     127.0.0.1:51876 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [43515]
+WARNING:  WatchFiles detected changes in 'app/routers/city_forecast_routes.py'. Reloading...
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:44:15 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [45144]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45144]
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:44:17 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [45156]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:51967 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51969 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51981 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51967 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51969 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52007 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51981 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52011 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52007 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52012 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52013 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52015 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52045 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52047 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52050 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52052 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52077 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52077 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52080 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52081 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52091 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52091 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52095 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52098 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52098 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52101 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52102 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52121 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52121 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52124 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52126 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52130 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52130 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52133 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52134 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52124 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52133 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/routers/city_forecast_routes.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45156]
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:45:28 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [45200]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-03-28 09:45:38 [info     ] Zone Bellandur not found. Triggering AI prediction...
+2026-03-28 09:45:38 [info     ] Targeting real-world coordinates for: Bellandur, India
+2026-03-28 09:45:39 [info     ] Successfully found Bellandur at: 12.9371445, 77.6720227
+2026-03-28 09:45:40 [info     ] WAQI Data Received: PM2.5=53, CO=4.6
+INFO:     127.0.0.1:52164 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52167 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52174 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52175 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52174 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52174 - "GET /api/v1/scenarios/ HTTP/1.1" 200 OK
+2026-03-28 09:46:18 [info     ] Persisting Full Strategy for: zone-bellandur
+2026-03-28 09:46:18 [info     ] Strategy Save: SUCCESS
+INFO:     127.0.0.1:52146 - "GET /api/v1/city/zones/Bellandur HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52183 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52183 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52230 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52230 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52230 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52246 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52249 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52251 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52255 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52257 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52248 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52259 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+WARNING:  WatchFiles detected changes in 'app/services/city_graph.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45200]
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:46:57 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [45244]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52270 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52272 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52285 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52287 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52285 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52287 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:48:09 [info     ] Zone Manyata Tech Park not found. Triggering AI prediction...
+2026-03-28 09:48:09 [info     ] Targeting real-world coordinates for: Manyata Tech Park, India
+2026-03-28 09:48:10 [info     ] Successfully found Manyata Tech Park at: 13.0482891, 77.6211004
+2026-03-28 09:48:11 [info     ] WAQI Data Received: PM2.5=57, CO=3.7
+INFO:     127.0.0.1:52304 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52305 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52327 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52328 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+2026-03-28 09:48:51 [info     ] Persisting Full Strategy for: zone-manyata-tech-park
+2026-03-28 09:48:52 [info     ] Strategy Save: SUCCESS
+INFO:     127.0.0.1:52291 - "GET /api/v1/city/zones/Manyata%20Tech%20Park HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52327 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52328 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52340 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52342 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52349 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52350 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52349 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52352 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52352 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52362 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52366 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52367 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52368 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+2026-03-28 09:50:15 [info     ] Zone Yeshwanthpur not found. Triggering AI prediction...
+2026-03-28 09:50:15 [info     ] Targeting real-world coordinates for: Yeshwanthpur, India
+2026-03-28 09:50:15 [info     ] Successfully found Yeshwanthpur at: 13.0176937, 77.5555009
+2026-03-28 09:50:16 [info     ] WAQI Data Received: PM2.5=57, CO=3.7
+INFO:     127.0.0.1:52379 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52388 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52391 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52401 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+2026-03-28 09:50:57 [info     ] Persisting Full Strategy for: zone-yeshwanthpur
+2026-03-28 09:50:57 [info     ] Strategy Save: SUCCESS
+INFO:     127.0.0.1:52372 - "GET /api/v1/city/zones/Yeshwanthpur HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52413 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52413 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52416 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52417 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52434 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52437 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52438 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52442 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52441 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52442 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52442 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52438 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52434 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52437 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52448 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52456 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52459 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52471 - "OPTIONS /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52471 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52473 - "OPTIONS /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52486 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52486 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52495 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52498 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52508 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52511 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52513 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52513 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52521 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52524 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52533 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52533 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52545 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52545 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52548 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52550 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52548 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52555 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52573 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52583 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52586 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52588 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52589 - "GET /api/v1/forecast/map-trend HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/namitraj/Desktop/suci/backend/app/routers/city_forecast_routes.py", line 58, in get_map_trend
+    prediction = model_service.predict(
+                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SustainabilityModelService' object has no attribute 'predict'
+INFO:     127.0.0.1:52596 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52596 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52605 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/models.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     127.0.0.1:52473 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45244]
+WARNING:  WatchFiles detected changes in 'app/routers/scenarios.py'. Reloading...
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:58:18 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [45623]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45623]
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 09:58:21 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [45628]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52612 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52632 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52633 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52612 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52642 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52633 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52651 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52642 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52612 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52663 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52633 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52651 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52642 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52612 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52671 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52633 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52651 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52671 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52676 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52664 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52633 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52681 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52663 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52684 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52681 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52684 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52685 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52685 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52737 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52739 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52756 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52764 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52782 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52785 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52673 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52820 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52824 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52825 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52826 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52829 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52845 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52845 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52848 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52848 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52848 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52872 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52883 - "OPTIONS /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52885 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52885 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52883 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52920 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52920 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52923 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52926 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52924 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52924 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52931 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52937 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52937 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52933 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52949 - "OPTIONS /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52951 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52951 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52957 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52963 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52971 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52978 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52985 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52985 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52988 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52993 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52997 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53004 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53011 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53011 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53015 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53018 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53022 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53029 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53036 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53036 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53041 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53041 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52949 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53044 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53052 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53061 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53061 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53067 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53067 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53070 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53075 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53084 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53087 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53088 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53087 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53091 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53092 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "GET /api/v1/scenarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53102 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53102 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53102 - "GET /api/v1/reports/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53108 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53121 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53124 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53124 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53130 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53135 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53146 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53150 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53150 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53158 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53166 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53175 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53175 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53181 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53195 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53200 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53210 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53210 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53213 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53218 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53221 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53232 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53234 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53240 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53249 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53254 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53272 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53272 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53300 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53307 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53310 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53319 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53319 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53328 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53337 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53340 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53349 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53351 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53355 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53363 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53366 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53373 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53379 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53382 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53387 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53391 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53394 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53403 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53411 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53418 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53422 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53425 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53435 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53441 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53463 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53463 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53466 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53469 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53468 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53473 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53477 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53477 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53483 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53484 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53483 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53490 - "GET /api/v1/scenarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53490 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53490 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53490 - "GET /api/v1/reports/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53494 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53490 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53497 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53490 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53490 - "GET /api/v1/scenarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53490 - "OPTIONS /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53508 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53497 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53512 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53515 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53515 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53515 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53515 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53520 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53521 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53523 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53521 - "OPTIONS /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53523 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53533 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53541 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53544 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53547 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53550 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53550 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53553 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53553 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53520 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53561 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53566 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53569 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53571 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53574 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53574 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53577 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53577 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53587 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53592 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53598 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53605 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53610 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53610 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53613 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53613 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53634 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53640 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53645 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53655 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53658 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53658 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53660 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53660 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53672 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53677 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53681 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53684 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53686 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53684 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53690 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53694 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53703 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53711 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53714 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53718 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53720 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53720 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53723 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53726 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53731 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53740 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53744 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53748 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53748 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53751 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53753 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53757 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53763 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53774 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53779 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53789 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53790 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53789 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53800 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53805 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53810 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53824 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53836 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53842 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53851 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53868 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53869 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53868 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53871 - "GET /api/v1/scenarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53874 - "OPTIONS /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53874 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53876 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53876 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53876 - "GET /api/v1/reports/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53896 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53896 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53899 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "OPTIONS /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53911 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53934 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53934 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53937 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53940 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53939 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53951 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53952 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53951 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53955 - "GET /api/v1/scenarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53957 - "POST /api/v1/scenarios/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53957 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53957 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53965 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53965 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53968 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53969 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53982 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53991 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53991 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54003 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54016 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54016 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53969 - "POST /api/v1/chat/message HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54034 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54042 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54044 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54058 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54068 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54070 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54083 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54091 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54094 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54108 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54113 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54115 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54128 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54133 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+WARNING:  WatchFiles detected changes in 'app/routers/scenarios.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45628]
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 10:40:59 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [46265]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:54183 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54195 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54202 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54217 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54217 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54220 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54221 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54227 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54237 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54238 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54237 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54252 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54261 - "GET /api/v1/scenarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54276 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54276 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54279 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54281 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54276 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54276 - "GET /api/v1/reports/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54282 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54323 - "GET /api/v1/interventions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54323 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54326 - "GET /api/v1/rlaif/accuracy-log HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54327 - "GET /api/v1/forecast/map-trend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54333 - "GET /api/v1/city/zones/zone-yeshwanthpur/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54340 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54340 - "GET /api/v1/city/zones/zone-yeshwanthpur/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54355 - "GET /api/v1/city/zones/zone-yeshwanthpur/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54368 - "GET /api/v1/forecast/all-zones HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54368 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54368 - "GET /api/v1/city/zones/zone-yeshwanthpur/state HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/routers/scenarios.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [46265]
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/namitraj/Desktop/suci/backend/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-03-28 10:48:02 [info     ] ML Model loaded successfully from /Users/namitraj/Desktop/suci/backend/app/services/../ml_models/random_forest_regressor_model.joblib
+INFO:     Started server process [46352]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:54374 - "GET /api/v1/city/zones/zone-yeshwanthpur/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54389 - "GET /api/v1/city/zones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54389 - "GET /api/v1/city/zones/zone-yeshwanthpur/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54398 - "GET /api/v1/city/zones/zone-yeshwanthpur/state HTTP/1.1" 200 OK
